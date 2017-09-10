@@ -1,0 +1,2025 @@
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (21.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateElders (20170908153902)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE TABLE "elders" ("id" bigserial primary key, "name" character varying, "title" character varying, "location" character varying, "duration" character varying, "details" character varying, "date_needed" date, "phone" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170908153902"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-08 15:40:26.269073"], ["updated_at", "2017-09-08 15:40:26.269073"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTasks (20170908154440)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (43.8ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "task_name" character varying, "date_needed" date, "location" character varying, "duration" character varying, "details" character varying, "phone" character varying, "email" character varying, "requested_by" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170908154440"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.0ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Otilia Conroy DVM"], ["title", "Community-Services"], ["location", "37861"], ["duration", "12.05"], ["details", "Drinking meh biodiesel letterpress goth flannel street."], ["date_needed", "2017-09-19"], ["phone", "1-174-021-6617 x29090"], ["email", "mabel@example.net"], ["created_at", "2017-09-08 16:22:00.975862"], ["updated_at", "2017-09-08 16:22:00.975862"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Eunice Olson"], ["title", "Healthcare"], ["location", "53436-1545"], ["duration", "3.96"], ["details", "Craft beer green juice skateboard letterpress."], ["date_needed", "2017-09-11"], ["phone", "1-934-041-6263 x23629"], ["email", "mohammed@example.com"], ["created_at", "2017-09-08 16:22:00.989192"], ["updated_at", "2017-09-08 16:22:00.989192"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Gene Kris"], ["title", "Sales"], ["location", "33654-1952"], ["duration", "77.54"], ["details", "Etsy five dollar toast vhs hammock kickstarter gastropub yolo."], ["date_needed", "2017-09-13"], ["phone", "1-670-298-2841 x312"], ["email", "jamar_effertz@example.com"], ["created_at", "2017-09-08 16:22:00.993663"], ["updated_at", "2017-09-08 16:22:00.993663"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Dr. Pattie Blanda"], ["title", "Construction"], ["location", "37995"], ["duration", "49.16"], ["details", "Helvetica mixtape kombucha gentrify food truck pabst bushwick post-ironic."], ["date_needed", "2017-09-24"], ["phone", "731.709.8009 x869"], ["email", "tanya@example.com"], ["created_at", "2017-09-08 16:22:00.996867"], ["updated_at", "2017-09-08 16:22:00.996867"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Ova Blanda"], ["title", "Manufacturing"], ["location", "95042-7620"], ["duration", "78.86"], ["details", "Authentic squid retro lo-fi gastropub leggings."], ["date_needed", "2017-09-25"], ["phone", "650.118.6095"], ["email", "vincenza.bergnaum@example.org"], ["created_at", "2017-09-08 16:22:00.999796"], ["updated_at", "2017-09-08 16:22:00.999796"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Jeanne Ernser"], ["title", "Mining"], ["location", "87212-5165"], ["duration", "61.32"], ["details", "Etsy mlkshk taxidermy 3 wolf moon."], ["date_needed", "2017-09-12"], ["phone", "(820) 004-4558 x33723"], ["email", "ava.predovic@example.org"], ["created_at", "2017-09-08 16:22:01.002393"], ["updated_at", "2017-09-08 16:22:01.002393"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Ubaldo Davis"], ["title", "Education"], ["location", "93075"], ["duration", "68.04"], ["details", "Kinfolk pork belly disrupt freegan banh mi microdosing chicharrones brooklyn."], ["date_needed", "2017-09-24"], ["phone", "1-128-306-3951"], ["email", "lucie.lind@example.com"], ["created_at", "2017-09-08 16:22:01.004920"], ["updated_at", "2017-09-08 16:22:01.004920"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "William Botsford"], ["title", "Sales"], ["location", "38778"], ["duration", "10.27"], ["details", "Dreamcatcher knausgaard before they sold out trust fund."], ["date_needed", "2017-09-22"], ["phone", "(425) 621-6761"], ["email", "johann@example.org"], ["created_at", "2017-09-08 16:22:01.007465"], ["updated_at", "2017-09-08 16:22:01.007465"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Johnson Donnelly"], ["title", "Legal"], ["location", "71703-5463"], ["duration", "56.07"], ["details", "Tattooed hashtag literally church-key tote bag."], ["date_needed", "2017-09-24"], ["phone", "209.313.4517"], ["email", "michaela@example.org"], ["created_at", "2017-09-08 16:22:01.012382"], ["updated_at", "2017-09-08 16:22:01.012382"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Leann Blick"], ["title", "IT"], ["location", "65955"], ["duration", "5.14"], ["details", "Banh mi chia cardigan normcore pour-over shabby chic disrupt."], ["date_needed", "2017-09-23"], ["phone", "1-421-153-5924"], ["email", "dante@example.net"], ["created_at", "2017-09-08 16:22:01.015508"], ["updated_at", "2017-09-08 16:22:01.015508"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/elders" for 127.0.0.1 at 2017-09-08 11:22:25 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#index as HTML
+  [1m[36mElder Load (7.0ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+Completed 200 OK in 41ms (Views: 23.9ms | ActiveRecord: 12.8ms)
+
+
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (18.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddForeignKeyToTasks (20170908190703)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.1ms)[0m  [1m[35mALTER TABLE "tasks" ADD "elder_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170908190703"]]
+  [1m[35m (18.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (18.7ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Brock Kerluke"], ["title", "Administration"], ["location", "49246-8445"], ["duration", "33.14"], ["details", "Listicle keffiyeh pug art party xoxo post-ironic fingerstache."], ["date_needed", "2017-09-09"], ["phone", "1-718-523-0335 x99246"], ["email", "skye.muller@example.org"], ["created_at", "2017-09-08 19:16:31.054669"], ["updated_at", "2017-09-08 19:16:31.054669"]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Legal"], ["date_needed", "2017-09-25"], ["location", "86609-9409"], ["duration", "27.91"], ["details", "Small batch roof iphone muggle magic mixtape wolf."], ["phone", "794-379-1130 x3196"], ["email", "idella_kihn@example.com"], ["created_at", "2017-09-08 19:16:31.116152"], ["updated_at", "2017-09-08 19:16:31.116152"], ["elder_id", 10]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Erika Schmeler"], ["title", "Administration"], ["location", "95881"], ["duration", "13.71"], ["details", "Pop-up kombucha vinegar williamsburg cardigan gluten-free poutine fixie."], ["date_needed", "2017-09-12"], ["phone", "1-179-471-7465"], ["email", "noah_rowe@example.net"], ["created_at", "2017-09-08 19:16:31.125687"], ["updated_at", "2017-09-08 19:16:31.125687"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Marketing"], ["date_needed", "2017-09-26"], ["location", "33616-9754"], ["duration", "46.85"], ["details", "Seitan tote bag plaid mixtape neutra."], ["phone", "(439) 666-2818"], ["email", "winfield@example.org"], ["created_at", "2017-09-08 19:16:31.133284"], ["updated_at", "2017-09-08 19:16:31.133284"], ["elder_id", 8]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Jamil Kuhic"], ["title", "Government"], ["location", "49048-0953"], ["duration", "98.41"], ["details", "Jean shorts pop-up chillwave godard deep v keytar cleanse ramps."], ["date_needed", "2017-09-11"], ["phone", "1-741-490-2419"], ["email", "emery@example.com"], ["created_at", "2017-09-08 19:16:31.138169"], ["updated_at", "2017-09-08 19:16:31.138169"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Administration"], ["date_needed", "2017-09-27"], ["location", "88838-3095"], ["duration", "99.43"], ["details", "Everyday bespoke flexitarian ethical freegan food truck yuccie."], ["phone", "(350) 943-3690"], ["email", "edgar@example.com"], ["created_at", "2017-09-08 19:16:31.141600"], ["updated_at", "2017-09-08 19:16:31.141600"], ["elder_id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Maxwell Jerde"], ["title", "Design"], ["location", "77572"], ["duration", "50.05"], ["details", "+1 quinoa kickstarter butcher yr selfies xoxo cardigan."], ["date_needed", "2017-09-10"], ["phone", "(786) 931-5867 x56492"], ["email", "libby_keler@example.org"], ["created_at", "2017-09-08 19:16:31.145682"], ["updated_at", "2017-09-08 19:16:31.145682"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Manufacturing"], ["date_needed", "2017-09-23"], ["location", "53399"], ["duration", "45.41"], ["details", "Wayfarers pug yr tote bag twee drinking hashtag shoreditch pour-over."], ["phone", "(519) 619-2135 x0377"], ["email", "marta.barton@example.net"], ["created_at", "2017-09-08 19:16:31.150708"], ["updated_at", "2017-09-08 19:16:31.150708"], ["elder_id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Alfonso Spencer PhD"], ["title", "IT"], ["location", "29858"], ["duration", "97.16"], ["details", "Master umami austin cronut heirloom wayfarers hella."], ["date_needed", "2017-09-11"], ["phone", "1-118-312-1651 x9002"], ["email", "yolanda.ankunding@example.net"], ["created_at", "2017-09-08 19:16:31.154636"], ["updated_at", "2017-09-08 19:16:31.154636"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Community-Services"], ["date_needed", "2017-09-25"], ["location", "15182"], ["duration", "82.88"], ["details", "Retro health keffiyeh gastropub hammock cray salvia swag."], ["phone", "(639) 506-5164 x442"], ["email", "sanford.ondricka@example.org"], ["created_at", "2017-09-08 19:16:31.157713"], ["updated_at", "2017-09-08 19:16:31.157713"], ["elder_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Maegan Bosco"], ["title", "Accounting"], ["location", "42079"], ["duration", "29.74"], ["details", "Fingerstache fanny pack microdosing put a bird on it salvia."], ["date_needed", "2017-09-17"], ["phone", "440.540.9158"], ["email", "adonis_abshire@example.net"], ["created_at", "2017-09-08 19:16:31.165599"], ["updated_at", "2017-09-08 19:16:31.165599"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Government"], ["date_needed", "2017-09-19"], ["location", "20197-5856"], ["duration", "67.73"], ["details", "Actually health meditation poutine migas you probably haven't heard of them next level fashion axe."], ["phone", "208.806.6714"], ["email", "camron_pfeffer@example.org"], ["created_at", "2017-09-08 19:16:31.170073"], ["updated_at", "2017-09-08 19:16:31.170073"], ["elder_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Maxwell Wisozk"], ["title", "Farming"], ["location", "24021"], ["duration", "54.78"], ["details", "Typewriter messenger bag migas meggings venmo schlitz quinoa tattooed green juice."], ["date_needed", "2017-09-15"], ["phone", "(190) 954-7638"], ["email", "isac@example.org"], ["created_at", "2017-09-08 19:16:31.174408"], ["updated_at", "2017-09-08 19:16:31.174408"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Marketing"], ["date_needed", "2017-09-19"], ["location", "99902"], ["duration", "84.1"], ["details", "Cleanse poutine umami lo-fi whatever shabby chic green juice keffiyeh."], ["phone", "320-882-9265"], ["email", "delores@example.org"], ["created_at", "2017-09-08 19:16:31.179697"], ["updated_at", "2017-09-08 19:16:31.179697"], ["elder_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Ms. Georgette Bartell"], ["title", "Marketing"], ["location", "85528"], ["duration", "65.54"], ["details", "Shabby chic 8-bit 90's hoodie next level."], ["date_needed", "2017-09-27"], ["phone", "904-648-5622"], ["email", "orpha_wiegand@example.com"], ["created_at", "2017-09-08 19:16:31.184174"], ["updated_at", "2017-09-08 19:16:31.184174"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Hospitality"], ["date_needed", "2017-09-18"], ["location", "55967"], ["duration", "5.19"], ["details", "Crucifix sustainable aesthetic before they sold out actually tumblr lomo vhs green juice."], ["phone", "(354) 893-2054"], ["email", "laisha@example.net"], ["created_at", "2017-09-08 19:16:31.187926"], ["updated_at", "2017-09-08 19:16:31.187926"], ["elder_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Evelyn Kautzer"], ["title", "Accounting"], ["location", "93928-9056"], ["duration", "15.68"], ["details", "Paleo asymmetrical street pabst austin tote bag forage."], ["date_needed", "2017-09-12"], ["phone", "916-334-2717 x7126"], ["email", "camille@example.com"], ["created_at", "2017-09-08 19:16:31.191971"], ["updated_at", "2017-09-08 19:16:31.191971"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Community-Services"], ["date_needed", "2017-09-21"], ["location", "41521-3738"], ["duration", "90.79"], ["details", "Tattooed wes anderson truffaut scenester pabst green juice polaroid."], ["phone", "(860) 760-8543"], ["email", "araceli_abshire@example.org"], ["created_at", "2017-09-08 19:16:31.197192"], ["updated_at", "2017-09-08 19:16:31.197192"], ["elder_id", 8]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Miss Mertie Funk"], ["title", "Marketing"], ["location", "74766"], ["duration", "73.09"], ["details", "Locavore vhs 90's hoodie diy."], ["date_needed", "2017-09-21"], ["phone", "361.606.8846 x4407"], ["email", "pinkie@example.com"], ["created_at", "2017-09-08 19:16:31.202660"], ["updated_at", "2017-09-08 19:16:31.202660"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "IT"], ["date_needed", "2017-09-21"], ["location", "54261"], ["duration", "31.36"], ["details", "Ethical cleanse food truck squid pickled tilde meditation."], ["phone", "262-708-6708 x142"], ["email", "berenice.lueilwitz@example.org"], ["created_at", "2017-09-08 19:16:31.207902"], ["updated_at", "2017-09-08 19:16:31.207902"], ["elder_id", 6]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/elders" for 127.0.0.1 at 2017-09-08 14:16:57 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#index as HTML
+  [1m[36mElder Load (1.3ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+Completed 200 OK in 60ms (Views: 44.8ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-08 14:17:05 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 63ms (Views: 39.0ms | ActiveRecord: 20.2ms)
+
+
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Orland Torphy Jr."], ["title", "Mining"], ["location", "96156"], ["duration", "23.58"], ["details", "Before they sold out brooklyn irony slow-carb kale chips tumblr heirloom."], ["date_needed", "2017-09-19"], ["phone", "(262) 628-8772 x390"], ["email", "caandra@example.org"], ["created_at", "2017-09-08 19:18:42.950614"], ["updated_at", "2017-09-08 19:18:42.950614"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Accounting"], ["date_needed", "2017-09-11"], ["location", "38072-5363"], ["duration", "86.74"], ["details", "Hashtag pbr&b kitsch normcore fixie post-ironic pop-up flannel."], ["phone", "890-632-0878 x438"], ["email", "antonietta.dietrich@example.org"], ["requested_by", "Alfreda Kshlerin I"], ["created_at", "2017-09-08 19:18:42.985952"], ["updated_at", "2017-09-08 19:18:42.985952"], ["elder_id", 3]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Vanessa Walker Jr."], ["title", "Farming"], ["location", "83011"], ["duration", "51.8"], ["details", "Trust fund kitsch viral drinking whatever vice brunch."], ["date_needed", "2017-09-22"], ["phone", "(701) 658-4387 x10101"], ["email", "leif@example.org"], ["created_at", "2017-09-08 19:18:42.991443"], ["updated_at", "2017-09-08 19:18:42.991443"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Manufacturing"], ["date_needed", "2017-09-20"], ["location", "67345-9476"], ["duration", "7.67"], ["details", "Cliche etsy phlogiston park waistcoat."], ["phone", "1-727-523-2344 x6365"], ["email", "telly.mayert@example.net"], ["requested_by", "Christy Corwin"], ["created_at", "2017-09-08 19:18:42.995116"], ["updated_at", "2017-09-08 19:18:42.995116"], ["elder_id", 4]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Myrtis Leuschke"], ["title", "Community-Services"], ["location", "65243"], ["duration", "48.49"], ["details", "Try-hard cornhole disrupt cardigan."], ["date_needed", "2017-09-19"], ["phone", "700-346-5369"], ["email", "vita.towne@example.net"], ["created_at", "2017-09-08 19:18:42.999931"], ["updated_at", "2017-09-08 19:18:42.999931"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Consulting"], ["date_needed", "2017-09-21"], ["location", "30940"], ["duration", "93.01"], ["details", "Artisan you probably haven't heard of them chillwave small batch polaroid literally pinterest pitchfork."], ["phone", "(553) 887-2692 x4135"], ["email", "beverly.ruecker@example.com"], ["requested_by", "Schuyler Waelchi"], ["created_at", "2017-09-08 19:18:43.004318"], ["updated_at", "2017-09-08 19:18:43.004318"], ["elder_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Casandra Daugherty"], ["title", "Hospitality"], ["location", "39850"], ["duration", "39.22"], ["details", "Hella waistcoat cray chia deep v hoodie intelligentsia lumbersexual vhs."], ["date_needed", "2017-09-13"], ["phone", "224-734-0473 x518"], ["email", "rachael@example.com"], ["created_at", "2017-09-08 19:18:43.014453"], ["updated_at", "2017-09-08 19:18:43.014453"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Farming"], ["date_needed", "2017-09-28"], ["location", "73593"], ["duration", "66.41"], ["details", "You probably haven't heard of them organic franzen pabst seitan wolf forage."], ["phone", "876.859.6351"], ["email", "taylor.jakubowski@example.net"], ["requested_by", "Candice Kutch I"], ["created_at", "2017-09-08 19:18:43.018815"], ["updated_at", "2017-09-08 19:18:43.018815"], ["elder_id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Daniela Braun DVM"], ["title", "Design"], ["location", "38945-9771"], ["duration", "82.18"], ["details", "Tumblr mixtape xoxo fingerstache seitan dreamcatcher pop-up."], ["date_needed", "2017-09-10"], ["phone", "(737) 752-4887 x81970"], ["email", "janice@example.com"], ["created_at", "2017-09-08 19:18:43.023081"], ["updated_at", "2017-09-08 19:18:43.023081"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Legal"], ["date_needed", "2017-09-20"], ["location", "92869"], ["duration", "98.85"], ["details", "Keytar mustache williamsburg beard hoodie venmo chillwave narwhal normcore."], ["phone", "1-494-329-5862 x506"], ["email", "judy_connelly@example.com"], ["requested_by", "Bernard Hoppe"], ["created_at", "2017-09-08 19:18:43.027546"], ["updated_at", "2017-09-08 19:18:43.027546"], ["elder_id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Kristofer Emard III"], ["title", "Healthcare"], ["location", "22424-0296"], ["duration", "9.41"], ["details", "Cray cleanse sartorial fixie."], ["date_needed", "2017-09-23"], ["phone", "(972) 478-0422 x202"], ["email", "hoyt_schaefer@example.net"], ["created_at", "2017-09-08 19:18:43.031908"], ["updated_at", "2017-09-08 19:18:43.031908"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Retail"], ["date_needed", "2017-09-22"], ["location", "95139-5199"], ["duration", "32.68"], ["details", "Trust fund green juice chicharrones brooklyn sriracha wayfarers pickled vegan craft beer."], ["phone", "(473) 408-2876"], ["email", "milton@example.net"], ["requested_by", "Samantha Bradtke"], ["created_at", "2017-09-08 19:18:43.039981"], ["updated_at", "2017-09-08 19:18:43.039981"], ["elder_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Jackie Kuhlman IV"], ["title", "Real-Estate"], ["location", "10102"], ["duration", "2.17"], ["details", "Street vinyl kombucha freegan chambray slow-carb roof."], ["date_needed", "2017-09-24"], ["phone", "321-733-6571 x343"], ["email", "krista.macgyver@example.org"], ["created_at", "2017-09-08 19:18:43.045413"], ["updated_at", "2017-09-08 19:18:43.045413"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Marketing"], ["date_needed", "2017-09-18"], ["location", "14319-4200"], ["duration", "9.99"], ["details", "Lo-fi meditation park hashtag poutine tote bag cronut."], ["phone", "(818) 520-0494 x8987"], ["email", "ward.steuber@example.net"], ["requested_by", "Scarlett Leannon"], ["created_at", "2017-09-08 19:18:43.054748"], ["updated_at", "2017-09-08 19:18:43.054748"], ["elder_id", 7]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Theodore Daugherty"], ["title", "Mining"], ["location", "53181"], ["duration", "17.42"], ["details", "Keffiyeh biodiesel tilde wayfarers."], ["date_needed", "2017-09-17"], ["phone", "1-846-567-6726"], ["email", "florence@example.com"], ["created_at", "2017-09-08 19:18:43.071309"], ["updated_at", "2017-09-08 19:18:43.071309"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Accounting"], ["date_needed", "2017-09-09"], ["location", "42486-1117"], ["duration", "48.38"], ["details", "Pork belly vinegar ennui leggings cleanse mixtape 8-bit dreamcatcher."], ["phone", "1-791-224-2254 x103"], ["email", "franz_smith@example.net"], ["requested_by", "Yvette Strosin"], ["created_at", "2017-09-08 19:18:43.080496"], ["updated_at", "2017-09-08 19:18:43.080496"], ["elder_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Scotty Rice"], ["title", "Retail"], ["location", "84682-9619"], ["duration", "33.17"], ["details", "Helvetica fashion axe humblebrag gentrify williamsburg banh mi single-origin coffee actually."], ["date_needed", "2017-09-28"], ["phone", "104.426.9302 x873"], ["email", "gabriella.miller@example.org"], ["created_at", "2017-09-08 19:18:43.084378"], ["updated_at", "2017-09-08 19:18:43.084378"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Mining"], ["date_needed", "2017-09-10"], ["location", "39205"], ["duration", "83.75"], ["details", "Occupy trust fund 8-bit actually."], ["phone", "934-322-2004"], ["email", "pietro@example.com"], ["requested_by", "Sage Pouros"], ["created_at", "2017-09-08 19:18:43.091313"], ["updated_at", "2017-09-08 19:18:43.091313"], ["elder_id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Jessy Rath"], ["title", "Manufacturing"], ["location", "12858-1244"], ["duration", "57.04"], ["details", "Wes anderson street truffaut listicle chillwave."], ["date_needed", "2017-09-26"], ["phone", "373.765.1619 x4370"], ["email", "rocky_becker@example.org"], ["created_at", "2017-09-08 19:18:43.097116"], ["updated_at", "2017-09-08 19:18:43.097116"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Community-Services"], ["date_needed", "2017-09-22"], ["location", "51701"], ["duration", "46.58"], ["details", "Food truck kale chips microdosing viral neutra meditation williamsburg pour-over cornhole."], ["phone", "(343) 205-6146"], ["email", "marcia_okon@example.net"], ["requested_by", "Cristina Klocko"], ["created_at", "2017-09-08 19:18:43.101217"], ["updated_at", "2017-09-08 19:18:43.101217"], ["elder_id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/tasks" for 127.0.0.1 at 2017-09-08 14:18:57 -0500
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 62ms (Views: 41.5ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-08 14:19:03 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 32ms (Views: 19.5ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-08 14:19:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Mitchel Bernier II"], ["title", "Healthcare"], ["location", "99852-3720"], ["duration", "57.9"], ["details", "Normcore pickled skateboard gastropub disrupt freegan kale chips small batch umami."], ["date_needed", "2017-09-27"], ["phone", "1-494-409-1796"], ["email", "cydney.reichert@example.com"], ["created_at", "2017-09-08 19:19:35.174122"], ["updated_at", "2017-09-08 19:19:35.174122"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Construction"], ["date_needed", "2017-09-28"], ["location", "20711-8762"], ["duration", "38.93"], ["details", "Banjo cardigan blue bottle chicharrones umami fixie iphone direct trade bushwick."], ["phone", "1-444-046-9141"], ["email", "otilia.hagenes@example.org"], ["requested_by", "Adam Schoen"], ["created_at", "2017-09-08 19:19:35.201707"], ["updated_at", "2017-09-08 19:19:35.201707"], ["elder_id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Macie Cruickshank DVM"], ["title", "Legal"], ["location", "69670"], ["duration", "39.94"], ["details", "Art party yuccie keffiyeh fingerstache."], ["date_needed", "2017-09-21"], ["phone", "1-728-539-1847 x8903"], ["email", "nicholaus_stamm@example.net"], ["created_at", "2017-09-08 19:19:35.205851"], ["updated_at", "2017-09-08 19:19:35.205851"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Education"], ["date_needed", "2017-09-11"], ["location", "90591"], ["duration", "6.06"], ["details", "Wolf shoreditch vegan you probably haven't heard of them."], ["phone", "420-594-6651"], ["email", "bianka@example.net"], ["requested_by", "Rhett Koepp PhD"], ["created_at", "2017-09-08 19:19:35.209858"], ["updated_at", "2017-09-08 19:19:35.209858"], ["elder_id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Nicholas Tremblay"], ["title", "Farming"], ["location", "92032-6057"], ["duration", "83.07"], ["details", "Mixtape pour-over put a bird on it scenester austin."], ["date_needed", "2017-09-14"], ["phone", "689.950.3004 x72092"], ["email", "luisa@example.com"], ["created_at", "2017-09-08 19:19:35.215077"], ["updated_at", "2017-09-08 19:19:35.215077"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Marketing"], ["date_needed", "2017-09-18"], ["location", "30307"], ["duration", "87.49"], ["details", "Banh mi art party echo tote bag whatever slow-carb bespoke iphone."], ["phone", "815-946-2085 x178"], ["email", "bernardo@example.net"], ["requested_by", "Kirstin Weber"], ["created_at", "2017-09-08 19:19:35.219529"], ["updated_at", "2017-09-08 19:19:35.219529"], ["elder_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Jacky Fritsch"], ["title", "Design"], ["location", "12158"], ["duration", "35.42"], ["details", "Shoreditch chicharrones pop-up normcore umami cliche mumblecore."], ["date_needed", "2017-09-14"], ["phone", "437.794.4043"], ["email", "waldo@example.org"], ["created_at", "2017-09-08 19:19:35.223475"], ["updated_at", "2017-09-08 19:19:35.223475"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Government"], ["date_needed", "2017-09-21"], ["location", "18644-1653"], ["duration", "40.1"], ["details", "Marfa listicle ramps paleo deep v."], ["phone", "390.140.7452"], ["email", "stephon_heel@example.org"], ["requested_by", "Tyrel Mills"], ["created_at", "2017-09-08 19:19:35.226951"], ["updated_at", "2017-09-08 19:19:35.226951"], ["elder_id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Roxanne Wunsch"], ["title", "Hospitality"], ["location", "49285-3896"], ["duration", "30.19"], ["details", "Bitters 3 wolf moon banjo loko."], ["date_needed", "2017-09-23"], ["phone", "(144) 841-9614 x0878"], ["email", "otis.simonis@example.org"], ["created_at", "2017-09-08 19:19:35.232172"], ["updated_at", "2017-09-08 19:19:35.232172"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Hospitality"], ["date_needed", "2017-09-16"], ["location", "86071-4574"], ["duration", "93.19"], ["details", "Jean shorts bicycle rights schlitz next level pinterest lo-fi taxidermy leggings."], ["phone", "877-525-6065"], ["email", "landen@example.com"], ["requested_by", "Christine Zboncak"], ["created_at", "2017-09-08 19:19:35.237604"], ["updated_at", "2017-09-08 19:19:35.237604"], ["elder_id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Wilford Beier"], ["title", "Farming"], ["location", "56720-5415"], ["duration", "68.11"], ["details", "Pbr&b migas squid park wayfarers tattooed loko hashtag dreamcatcher."], ["date_needed", "2017-09-27"], ["phone", "700.296.1576 x8368"], ["email", "lulu@example.com"], ["created_at", "2017-09-08 19:19:35.242968"], ["updated_at", "2017-09-08 19:19:35.242968"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Marketing"], ["date_needed", "2017-09-20"], ["location", "59927"], ["duration", "30.51"], ["details", "Chia chillwave hashtag celiac twee chambray vice +1."], ["phone", "592.367.4126 x61872"], ["email", "ernie.balistreri@example.com"], ["requested_by", "Mrs. Lionel Reilly"], ["created_at", "2017-09-08 19:19:35.246719"], ["updated_at", "2017-09-08 19:19:35.246719"], ["elder_id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Fredrick Beahan"], ["title", "Farming"], ["location", "31076"], ["duration", "12.76"], ["details", "Austin goth microdosing cliche whatever phlogiston pork belly marfa iphone."], ["date_needed", "2017-09-16"], ["phone", "(688) 075-2930 x408"], ["email", "elsie@example.net"], ["created_at", "2017-09-08 19:19:35.250428"], ["updated_at", "2017-09-08 19:19:35.250428"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Accounting"], ["date_needed", "2017-09-14"], ["location", "71613"], ["duration", "6.24"], ["details", "Yolo kale chips art party cardigan gluten-free narwhal cliche."], ["phone", "450.705.9315 x2400"], ["email", "keyshawn_macejkovic@example.net"], ["requested_by", "Eda Doyle"], ["created_at", "2017-09-08 19:19:35.254279"], ["updated_at", "2017-09-08 19:19:35.254279"], ["elder_id", 5]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Alec Spinka"], ["title", "Sales"], ["location", "61542"], ["duration", "33.95"], ["details", "Hammock hashtag schlitz five dollar toast jean shorts swag pug kickstarter deep v."], ["date_needed", "2017-09-11"], ["phone", "(744) 593-3944"], ["email", "annetta_zemlak@example.org"], ["created_at", "2017-09-08 19:19:35.259327"], ["updated_at", "2017-09-08 19:19:35.259327"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Accounting"], ["date_needed", "2017-09-13"], ["location", "52915"], ["duration", "36.48"], ["details", "Narwhal goth skateboard butcher single-origin coffee hashtag cardigan."], ["phone", "1-687-407-9329 x0293"], ["email", "hortense@example.net"], ["requested_by", "Asia Stoltenberg MD"], ["created_at", "2017-09-08 19:19:35.263644"], ["updated_at", "2017-09-08 19:19:35.263644"], ["elder_id", 9]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Hyman Herzog"], ["title", "Advertising"], ["location", "64409-4566"], ["duration", "83.94"], ["details", "Kombucha meh salvia ramps everyday."], ["date_needed", "2017-09-22"], ["phone", "(202) 786-5186"], ["email", "raegan@example.net"], ["created_at", "2017-09-08 19:19:35.270771"], ["updated_at", "2017-09-08 19:19:35.270771"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Farming"], ["date_needed", "2017-09-18"], ["location", "76696-5659"], ["duration", "85.48"], ["details", "Diy stumptown semiotics kogi +1."], ["phone", "301.302.3163 x3984"], ["email", "lilian.pollich@example.net"], ["requested_by", "Shad Kling"], ["created_at", "2017-09-08 19:19:35.278842"], ["updated_at", "2017-09-08 19:19:35.278842"], ["elder_id", 2]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Preston Greenholt"], ["title", "Advertising"], ["location", "53327-5616"], ["duration", "9.83"], ["details", "Typewriter offal normcore forage pbr&b single-origin coffee."], ["date_needed", "2017-09-28"], ["phone", "119-497-0844"], ["email", "tyrel@example.com"], ["created_at", "2017-09-08 19:19:35.294398"], ["updated_at", "2017-09-08 19:19:35.294398"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "requested_by", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["task_name", "Education"], ["date_needed", "2017-09-27"], ["location", "37392"], ["duration", "72.7"], ["details", "Crucifix leggings iphone mumblecore offal phlogiston."], ["phone", "(392) 644-7015 x342"], ["email", "addie_haag@example.com"], ["requested_by", "Arnoldo McLaughlin"], ["created_at", "2017-09-08 19:19:35.306656"], ["updated_at", "2017-09-08 19:19:35.306656"], ["elder_id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/tasks" for 127.0.0.1 at 2017-09-08 14:20:00 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 80ms (Views: 59.5ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-08 14:20:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveRequestedByFromTasks (20170908193256)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (36.7ms)[0m  [1m[35mALTER TABLE "tasks" DROP "requested_by"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170908193256"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Mrs. Meta Douglas"], ["title", "IT"], ["location", "79268"], ["duration", "62.64"], ["details", "Fixie master stumptown park echo hoodie ugh occupy brooklyn."], ["date_needed", "2017-09-24"], ["phone", "1-172-895-1031 x32655"], ["email", "jaquelin_lynch@example.com"], ["created_at", "2017-09-08 19:36:09.863929"], ["updated_at", "2017-09-08 19:36:09.863929"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Accounting"], ["date_needed", "2017-09-25"], ["location", "74021-4246"], ["duration", "28.73"], ["details", "Letterpress phlogiston vegan bushwick wayfarers plaid 90's gastropub."], ["phone", "435-046-9011"], ["email", "daija_thompson@example.org"], ["created_at", "2017-09-08 19:36:09.895084"], ["updated_at", "2017-09-08 19:36:09.895084"], ["elder_id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Samson Denesik Jr."], ["title", "Healthcare"], ["location", "72788"], ["duration", "51.58"], ["details", "Trust fund mustache butcher bushwick roof typewriter keffiyeh diy swag."], ["date_needed", "2017-09-15"], ["phone", "1-209-529-3842"], ["email", "madeline@example.com"], ["created_at", "2017-09-08 19:36:09.898819"], ["updated_at", "2017-09-08 19:36:09.898819"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Manufacturing"], ["date_needed", "2017-09-28"], ["location", "46286-6141"], ["duration", "37.27"], ["details", "Yolo vegan waistcoat poutine park."], ["phone", "593.444.2392 x86427"], ["email", "alene@example.net"], ["created_at", "2017-09-08 19:36:09.905464"], ["updated_at", "2017-09-08 19:36:09.905464"], ["elder_id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Ms. Kitty Schumm"], ["title", "Marketing"], ["location", "34287-7863"], ["duration", "26.37"], ["details", "Leggings green juice goth lo-fi mlkshk slow-carb kogi."], ["date_needed", "2017-09-10"], ["phone", "1-410-391-5709"], ["email", "candelario_runolfsdottir@example.net"], ["created_at", "2017-09-08 19:36:09.913055"], ["updated_at", "2017-09-08 19:36:09.913055"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Real-Estate"], ["date_needed", "2017-09-16"], ["location", "41254"], ["duration", "56.97"], ["details", "Retro cronut yr cleanse."], ["phone", "(500) 977-8844 x461"], ["email", "shanny_gibson@example.org"], ["created_at", "2017-09-08 19:36:09.916878"], ["updated_at", "2017-09-08 19:36:09.916878"], ["elder_id", 6]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Reggie Hintz"], ["title", "Advertising"], ["location", "23368"], ["duration", "81.27"], ["details", "Craft beer kale chips twee food truck hammock."], ["date_needed", "2017-09-21"], ["phone", "787-260-7682 x922"], ["email", "travon@example.org"], ["created_at", "2017-09-08 19:36:09.922180"], ["updated_at", "2017-09-08 19:36:09.922180"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Legal"], ["date_needed", "2017-09-17"], ["location", "94240"], ["duration", "89.05"], ["details", "Butcher franzen pickled cliche normcore."], ["phone", "200-268-1313 x40399"], ["email", "wava@example.org"], ["created_at", "2017-09-08 19:36:09.927582"], ["updated_at", "2017-09-08 19:36:09.927582"], ["elder_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Estella Bernier Sr."], ["title", "Legal"], ["location", "49283-0040"], ["duration", "25.81"], ["details", "Venmo cray everyday gentrify meditation scenester."], ["date_needed", "2017-09-19"], ["phone", "1-395-875-0210 x0445"], ["email", "lexus_watsica@example.com"], ["created_at", "2017-09-08 19:36:09.931035"], ["updated_at", "2017-09-08 19:36:09.931035"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Legal"], ["date_needed", "2017-09-12"], ["location", "73150"], ["duration", "17.4"], ["details", "Godard cliche yr scenester diy 3 wolf moon."], ["phone", "(286) 870-3510 x201"], ["email", "laura.mohr@example.com"], ["created_at", "2017-09-08 19:36:09.934187"], ["updated_at", "2017-09-08 19:36:09.934187"], ["elder_id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Willie Gleichner"], ["title", "Design"], ["location", "59292"], ["duration", "67.16"], ["details", "Heirloom skateboard franzen tattooed tousled blog."], ["date_needed", "2017-09-20"], ["phone", "1-655-093-6491 x86547"], ["email", "barrett.wintheiser@example.net"], ["created_at", "2017-09-08 19:36:09.939408"], ["updated_at", "2017-09-08 19:36:09.939408"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Manufacturing"], ["date_needed", "2017-09-09"], ["location", "61381"], ["duration", "93.74"], ["details", "Forage shoreditch loko actually."], ["phone", "1-532-196-8296 x980"], ["email", "nyasia@example.org"], ["created_at", "2017-09-08 19:36:09.944060"], ["updated_at", "2017-09-08 19:36:09.944060"], ["elder_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Coleman Kunze"], ["title", "Legal"], ["location", "66680"], ["duration", "87.1"], ["details", "Viral semiotics 90's you probably haven't heard of them."], ["date_needed", "2017-09-21"], ["phone", "1-585-496-6203"], ["email", "delbert@example.com"], ["created_at", "2017-09-08 19:36:09.950342"], ["updated_at", "2017-09-08 19:36:09.950342"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Banking"], ["date_needed", "2017-09-27"], ["location", "59457"], ["duration", "28.37"], ["details", "Leggings street mumblecore gluten-free."], ["phone", "1-719-452-3488 x08290"], ["email", "tristin.sporer@example.com"], ["created_at", "2017-09-08 19:36:09.954442"], ["updated_at", "2017-09-08 19:36:09.954442"], ["elder_id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Katrina Ullrich Jr."], ["title", "Government"], ["location", "70111-2455"], ["duration", "39.75"], ["details", "Venmo wes anderson tote bag selfies kickstarter 3 wolf moon butcher marfa chicharrones."], ["date_needed", "2017-09-25"], ["phone", "(495) 638-9324 x85429"], ["email", "luella@example.org"], ["created_at", "2017-09-08 19:36:09.958912"], ["updated_at", "2017-09-08 19:36:09.958912"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Government"], ["date_needed", "2017-09-21"], ["location", "75166-8063"], ["duration", "66.62"], ["details", "8-bit cray authentic loko gluten-free wes anderson."], ["phone", "1-222-262-2811"], ["email", "zion@example.com"], ["created_at", "2017-09-08 19:36:09.962321"], ["updated_at", "2017-09-08 19:36:09.962321"], ["elder_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Dr. Winifred Balistreri"], ["title", "Real-Estate"], ["location", "88837-5038"], ["duration", "3.3"], ["details", "Hella occupy tofu flannel portland thundercats swag pickled."], ["date_needed", "2017-09-22"], ["phone", "134.675.1112 x797"], ["email", "ariel.schneider@example.org"], ["created_at", "2017-09-08 19:36:09.966229"], ["updated_at", "2017-09-08 19:36:09.966229"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Accounting"], ["date_needed", "2017-09-14"], ["location", "63178-3898"], ["duration", "16.85"], ["details", "Ethical fanny pack messenger bag carry gentrify church-key hammock actually."], ["phone", "(357) 834-1636 x03135"], ["email", "corene_kris@example.com"], ["created_at", "2017-09-08 19:36:09.969748"], ["updated_at", "2017-09-08 19:36:09.969748"], ["elder_id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "title", "location", "duration", "details", "date_needed", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Miss Buford O'Hara"], ["title", "Farming"], ["location", "32325-5768"], ["duration", "4.99"], ["details", "Lumbersexual sriracha crucifix humblebrag polaroid yr."], ["date_needed", "2017-09-26"], ["phone", "(535) 829-9848 x16041"], ["email", "deangelo.jaskolski@example.com"], ["created_at", "2017-09-08 19:36:09.974669"], ["updated_at", "2017-09-08 19:36:09.974669"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Design"], ["date_needed", "2017-09-17"], ["location", "69358-6661"], ["duration", "45.01"], ["details", "Everyday five dollar toast diy meh banh mi aesthetic vegan."], ["phone", "664-021-5726 x576"], ["email", "kale@example.org"], ["created_at", "2017-09-08 19:36:09.978114"], ["updated_at", "2017-09-08 19:36:09.978114"], ["elder_id", 8]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/tasks" for 127.0.0.1 at 2017-09-08 14:38:53 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (3.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 62ms (Views: 40.1ms | ActiveRecord: 16.8ms)
+
+
+  [1m[35m (12.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (26.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.7ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1 LIMIT $2[0m  [["elder_id", 1], ["LIMIT", 11]]
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Started POST "/elders/2/tasks" for 127.0.0.1 at 2017-09-08 18:14:41 -0500
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#create as */*
+  Parameters: {"task"=>{"name"=>"shovel", "date needed"=>"9/12/17", "location"=>"78213", "duration"=>"45", "details"=>"lsjlsjflsksjfsf", "phone"=>"123.321.4584", "email"=>"poop@poop.com"}, "elder_id"=>"2"}
+Unpermitted parameters: :name, :date needed
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (21.9ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (45.2ms)[0m  [1m[32mINSERT INTO "tasks" ("location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["location", "78213"], ["duration", "45"], ["details", "lsjlsjflsksjfsf"], ["phone", "123.321.4584"], ["email", "poop@poop.com"], ["created_at", "2017-09-08 23:14:42.928091"], ["updated_at", "2017-09-08 23:14:42.928091"], ["elder_id", 2]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 282ms (Views: 2.4ms | ActiveRecord: 112.2ms)
+
+
+Started POST "/elders/2/tasks" for 127.0.0.1 at 2017-09-08 18:15:33 -0500
+Processing by TasksController#create as */*
+  Parameters: {"task"=>{"task_name"=>"shovel", "date_needed"=>"9/12/17", "location"=>"78213", "duration"=>"45", "details"=>"lsjlsjflsksjfsf", "phone"=>"123.321.4584", "email"=>"poop@poop.com"}, "elder_id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.8ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "shovel"], ["date_needed", "0009-12-17"], ["location", "78213"], ["duration", "45"], ["details", "lsjlsjflsksjfsf"], ["phone", "123.321.4584"], ["email", "poop@poop.com"], ["created_at", "2017-09-08 23:15:34.000361"], ["updated_at", "2017-09-08 23:15:34.000361"], ["elder_id", 2]]
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 43ms (Views: 1.2ms | ActiveRecord: 23.8ms)
+
+
+Started GET "/elders/2/tasks" for 127.0.0.1 at 2017-09-08 18:17:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/elders/2/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/2/tasks" for 127.0.0.1 at 2017-09-08 18:17:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/elders/2/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/2" for 127.0.0.1 at 2017-09-08 18:17:29 -0500
+Processing by EldersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 5.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/elders/2/task" for 127.0.0.1 at 2017-09-08 18:17:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/elders/2/task"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/2/tasks" for 127.0.0.1 at 2017-09-08 18:17:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/elders/2/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/2/tasks" for 127.0.0.1 at 2017-09-08 18:18:13 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/elders/2/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/2/tasks" for 127.0.0.1 at 2017-09-08 18:20:42 -0500
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/elders/2/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/2/tasks" for 127.0.0.1 at 2017-09-08 18:24:36 -0500
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/elders/2/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/2/" for 127.0.0.1 at 2017-09-08 18:24:50 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 1.2ms | ActiveRecord: 33.7ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-08 18:24:57 -0500
+Processing by EldersController#index as HTML
+  [1m[36mElder Load (7.4ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+Completed 200 OK in 49ms (Views: 31.8ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-08 18:25:10 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 69ms (Views: 49.8ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/elders/1/task" for 127.0.0.1 at 2017-09-08 18:25:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/elders/1/task"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elder/1/task" for 127.0.0.1 at 2017-09-08 18:28:01 -0500
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/elder/1/task"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elder/1/taskS" for 127.0.0.1 at 2017-09-08 18:28:14 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/elder/1/taskS"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elder/1/tasks" for 127.0.0.1 at 2017-09-08 18:28:20 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/elder/1/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mTask Load (12.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Started GET "/elder/1" for 127.0.0.1 at 2017-09-09 11:23:59 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/elder/1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/1" for 127.0.0.1 at 2017-09-09 11:24:07 -0500
+Processing by EldersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mElder Load (7.1ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+Completed 200 OK in 169ms (Views: 0.2ms | ActiveRecord: 35.8ms)
+
+
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-09 11:24:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/elders/1/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/1/task" for 127.0.0.1 at 2017-09-09 11:24:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/elders/1/task"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/1/task" for 127.0.0.1 at 2017-09-09 12:05:48 -0500
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/elders/1/task"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-09 12:05:50 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-09 12:05:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/elders/1/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-09 12:06:09 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/elders/1/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/1" for 127.0.0.1 at 2017-09-09 12:06:24 -0500
+Processing by EldersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mElder Load (12.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+Completed 200 OK in 165ms (Views: 0.3ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-09 12:13:15 -0500
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/elders/1/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mElder Load (2.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1 LIMIT $2[0m  [["elder_id", 2], ["LIMIT", 11]]
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-09 12:25:30 -0500
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Parameters: {"elder_id"=>"1"}
+Completed 500 Internal Server Error in 272ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `elder_id' for #<TasksController:0x007fc91cb13c98>
+Did you mean?  elder_url):
+  
+app/controllers/tasks_controller.rb:6:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-09 12:25:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-09 12:26:15 -0500
+  [1m[35m (8.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Parameters: {"elder_id"=>"1"}
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 44ms (ActiveRecord: 18.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Elder with 'id'=elder_id):
+  
+app/controllers/tasks_controller.rb:6:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-09 12:26:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-09 12:29:53 -0500
+  [1m[35m (7.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Parameters: {"elder_id"=>"1"}
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+Completed 200 OK in 175ms (Views: 73.9ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-09 12:29:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveColumnsFromElder (20170909205725)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.0ms)[0m  [1m[35mALTER TABLE "elder" DROP "title"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveColumnsFromElder (20170909205725)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (31.2ms)[0m  [1m[35mALTER TABLE "elders" DROP "title"[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveColumnsFromElder (20170909205725)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.2ms)[0m  [1m[35mALTER TABLE "elders" DROP "title"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveColumnsFromElder (20170909205725)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.5ms)[0m  [1m[35mALTER TABLE "elder" DROP "title"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveColumnsFromElder (20170909205725)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.1ms)[0m  [1m[35mALTER TABLE "elders" DROP "title"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveColumnsFromElder (20170909205725)
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (11.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170909205725"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-09 16:06:01 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Parameters: {"elder_id"=>"1"}
+  [1m[36mElder Load (0.6ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+Completed 200 OK in 146ms (Views: 45.6ms | ActiveRecord: 18.4ms)
+
+
+Started POST "/elders" for 127.0.0.1 at 2017-09-09 16:08:38 -0500
+Processing by EldersController#create as */*
+  Parameters: {"elder"=>{"name"=>"dorris", "phone"=>"9878878994", "email"=>"slfjjfls@poop.comm"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.8ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "dorris"], ["phone", "9878878994"], ["email", "slfjjfls@poop.comm"], ["created_at", "2017-09-09 21:08:38.301239"], ["updated_at", "2017-09-09 21:08:38.301239"]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 100ms (Views: 9.2ms | ActiveRecord: 41.0ms)
+
+
+Started DELETE "/elders" for 127.0.0.1 at 2017-09-09 16:08:56 -0500
+  
+ActionController::RoutingError (No route matches [DELETE] "/elders"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders" for 127.0.0.1 at 2017-09-09 16:09:07 -0500
+Processing by EldersController#index as */*
+  [1m[36mElder Load (6.2ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (2.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (5.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (29.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 21]]
+Completed 200 OK in 168ms (Views: 0.1ms | ActiveRecord: 57.8ms)
+
+
+Started DELETE "/elders/21" for 127.0.0.1 at 2017-09-09 16:09:37 -0500
+Processing by EldersController#destroy as */*
+  Parameters: {"elder"=>{"name"=>"dorris", "phone"=>"9878878994", "email"=>"slfjjfls@poop.comm"}, "id"=>"21"}
+  [1m[36mElder Load (2.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.7ms)[0m  [1m[31mDELETE FROM "elders" WHERE "elders"."id" = $1[0m  [["id", 21]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 25ms (ActiveRecord: 19.1ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-09 16:09:46 -0500
+Processing by EldersController#index as */*
+  [1m[36mElder Load (0.8ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (4.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (13.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (1.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (1.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (30.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (13.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (10.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+Completed 200 OK in 294ms (Views: 0.2ms | ActiveRecord: 84.4ms)
+
+
+Started PUT "/elders/20" for 127.0.0.1 at 2017-09-09 16:10:37 -0500
+Processing by EldersController#update as */*
+  Parameters: {"elder"=>{"name"=>"newupdate", "phone"=>"s", "email"=>"slfjjfls@poop.comm"}, "id"=>"20"}
+  [1m[36mElder Load (2.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (30.8ms)[0m  [1m[33mUPDATE "elders" SET "name" = $1, "phone" = $2, "email" = $3, "updated_at" = $4 WHERE "elders"."id" = $5[0m  [["name", "newupdate"], ["phone", "s"], ["email", "slfjjfls@poop.comm"], ["updated_at", "2017-09-09 21:10:37.921017"], ["id", 20]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 46ms (Views: 0.4ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 16:10:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/3/tasks" for 127.0.0.1 at 2017-09-09 16:15:45 -0500
+  [1m[35m (9.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as */*
+  Parameters: {"elder_id"=>"3"}
+  [1m[36mElder Load (0.7ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Load (2.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+Completed 200 OK in 137ms (Views: 39.3ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/elders/tasks" for 127.0.0.1 at 2017-09-09 16:15:56 -0500
+Processing by EldersController#show as */*
+  Parameters: {"id"=>"tasks"}
+  [1m[36mElder Load (1.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 48ms (ActiveRecord: 10.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Elder with 'id'=tasks):
+  
+app/controllers/elders_controller.rb:45:in `set_elder'
+Started GET "/elders/tasks" for 127.0.0.1 at 2017-09-09 16:49:46 -0500
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#show as */*
+  Parameters: {"id"=>"tasks"}
+  [1m[36mElder Load (6.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 35ms (ActiveRecord: 19.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Elder with 'id'=tasks):
+  
+app/controllers/elders_controller.rb:45:in `set_elder'
+Started GET "/elders/tasks" for 127.0.0.1 at 2017-09-09 16:51:16 -0500
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#show as */*
+  Parameters: {"id"=>"tasks"}
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 19ms (ActiveRecord: 5.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Elder with 'id'=tasks):
+  
+app/controllers/elders_controller.rb:45:in `set_elder'
+Started GET "/elders/tasks" for 127.0.0.1 at 2017-09-09 16:52:37 -0500
+Processing by EldersController#show as */*
+  Parameters: {"id"=>"tasks"}
+  [1m[36mElder Load (0.8ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 13ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Elder with 'id'=tasks):
+  
+app/controllers/elders_controller.rb:45:in `set_elder'
+Started GET "/elders/tasks" for 127.0.0.1 at 2017-09-09 16:52:55 -0500
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#show as */*
+  Parameters: {"id"=>"tasks"}
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 20ms (ActiveRecord: 5.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Elder with 'id'=tasks):
+  
+app/controllers/elders_controller.rb:45:in `set_elder'
+Started GET "/elders/tasks" for 127.0.0.1 at 2017-09-09 16:53:58 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#show as */*
+  Parameters: {"id"=>"tasks"}
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 20ms (ActiveRecord: 6.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Elder with 'id'=tasks):
+  
+app/controllers/elders_controller.rb:45:in `set_elder'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 16:55:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 17:00:07 -0500
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 17:00:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/tasks" for 127.0.0.1 at 2017-09-09 17:00:14 -0500
+Processing by EldersController#show as */*
+  Parameters: {"id"=>"tasks"}
+  [1m[36mElder Load (0.6ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 37ms (ActiveRecord: 13.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Elder with 'id'=tasks):
+  
+app/controllers/elders_controller.rb:45:in `set_elder'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 17:08:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mTask Load (2.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 18:33:52 -0500
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  [1m[36mElder Load (12.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 52ms (ActiveRecord: 30.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Elder with 'id'=):
+  
+app/controllers/tasks_controller.rb:10:in `index'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 18:34:48 -0500
+Processing by TasksController#index as HTML
+  [1m[36mElder Load (1.1ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Elder with 'id'=):
+  
+app/controllers/tasks_controller.rb:10:in `index'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 18:35:10 -0500
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 29ms (ActiveRecord: 9.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Elder with 'id'=):
+  
+app/controllers/tasks_controller.rb:10:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-09 18:35:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 18:37:37 -0500
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 24ms (ActiveRecord: 10.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Elder with 'id'=):
+  
+app/controllers/tasks_controller.rb:10:in `index'
+Started GET "/elders" for 127.0.0.1 at 2017-09-09 18:38:56 -0500
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#index as HTML
+  [1m[36mElder Load (21.0ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+Completed 200 OK in 142ms (Views: 0.2ms | ActiveRecord: 36.3ms)
+
+
+Started GET "/elders/2" for 127.0.0.1 at 2017-09-09 18:39:02 -0500
+Processing by EldersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mElder Load (5.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+Completed 200 OK in 28ms (Views: 0.2ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/elders/2/tasks" for 127.0.0.1 at 2017-09-09 18:39:07 -0500
+Processing by TasksController#index as HTML
+  Parameters: {"elder_id"=>"2"}
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-09 18:39:14 -0500
+Processing by TasksController#index as HTML
+  Parameters: {"elder_id"=>"1"}
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/elders/3/tasks" for 127.0.0.1 at 2017-09-09 18:39:20 -0500
+Processing by TasksController#index as HTML
+  Parameters: {"elder_id"=>"3"}
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-09 18:39:25 -0500
+Processing by EldersController#index as HTML
+  [1m[36mElder Load (0.6ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+Completed 200 OK in 42ms (Views: 0.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-09 18:53:11 -0500
+Processing by EldersController#index as HTML
+  [1m[36mElder Load (25.0ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+Completed 200 OK in 139ms (Views: 0.4ms | ActiveRecord: 30.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 18:53:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 18:53:47 -0500
+  [1m[35m (37.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 30.8ms)
+
+
+  
+NoMethodError (undefined method `elders' for #<Task:0x007fb288261668>
+Did you mean?  elder
+               elder=):
+  
+app/controllers/tasks_controller.rb:7:in `index'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 18:54:25 -0500
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mElder Load (10.6ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 119ms (Views: 0.2ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-09 18:54:39 -0500
+Processing by TasksController#index as HTML
+  Parameters: {"elder_id"=>"1"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 0.1ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-09 19:18:26 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Parameters: {"elder_id"=>"1"}
+  [1m[36mTask Load (10.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mElder Load (1.1ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mElder Load (0.6ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mElder Load (0.9ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mElder Load (0.9ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mElder Load (1.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 237ms (Views: 0.5ms | ActiveRecord: 38.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 19:18:39 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mElder Load (0.8ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mElder Load (5.7ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.7ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.6ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mElder Load (3.7ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mElder Load (17.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 171ms (Views: 7.4ms | ActiveRecord: 67.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2017-09-09 19:18:45 -0500
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (6.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 19:19:27 -0500
+Processing by TasksController#index as */*
+  [1m[36mTask Load (3.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mElder Load (2.1ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.1ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.1ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 170ms (Views: 0.6ms | ActiveRecord: 8.1ms)
+
+
+Started DELETE "/tasks/1" for 127.0.0.1 at 2017-09-09 19:19:40 -0500
+Processing by TasksController#destroy as */*
+  Parameters: {"elder"=>{"name"=>"newupdate", "phone"=>"s", "email"=>"slfjjfls@poop.comm"}, "id"=>"1"}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (71.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 96ms (ActiveRecord: 81.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-09 19:19:47 -0500
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mElder Load (6.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (1.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (1.1ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (2.6ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 0.2ms | ActiveRecord: 13.4ms)
+
+
+Started PUT "/tasks/2" for 127.0.0.1 at 2017-09-09 19:20:36 -0500
+Processing by TasksController#update as */*
+  Parameters: {"task"=>{"task_name"=>"clean"}, "text/plain"=>[""], "id"=>"2"}
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (3.4ms)[0m  [1m[33mUPDATE "tasks" SET "task_name" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["task_name", "clean"], ["updated_at", "2017-09-10 00:20:36.807832"], ["id", 2]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 58ms (Views: 4.0ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2017-09-09 19:42:02 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/welcome"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/index" for 127.0.0.1 at 2017-09-09 19:42:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/Welcome" for 127.0.0.1 at 2017-09-09 19:43:51 -0500
+  [1m[35m (32.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/Welcome"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/root" for 127.0.0.1 at 2017-09-09 19:44:37 -0500
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/root"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-09-09 19:44:44 -0500
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
