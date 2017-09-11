@@ -2306,3 +2306,631 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 2.8ms)
 
 
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (6.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8620.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "elder_helper_app_api_development"[0m
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (8573.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "elder_helper_app_api_development"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (230.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "elder_helper_app_api_development"[0m
+  [1m[35m (206.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "elder_helper_app_api_test"[0m
+  [1m[35m (644.4ms)[0m  [1m[35mCREATE DATABASE "elder_helper_app_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (522.4ms)[0m  [1m[35mCREATE DATABASE "elder_helper_app_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "elders" CASCADE[0m
+  [1m[35m (26.0ms)[0m  [1m[35mCREATE TABLE "elders" ("id" bigserial primary key, "name" character varying, "phone" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks" CASCADE[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "task_name" character varying, "date_needed" date, "location" character varying, "duration" character varying, "details" character varying, "phone" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "elder_id" integer, "volunteer_name" character varying, "volunteer_phone" character varying, "volunteer_email" character varying)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170911030157)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170908153902),
+(20170908154440),
+(20170908190703),
+(20170908193256),
+(20170909205725);
+
+[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-11 15:05:11.714511"], ["updated_at", "2017-09-11 15:05:11.714511"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "elders" CASCADE[0m
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "elders" ("id" bigserial primary key, "name" character varying, "phone" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks" CASCADE[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "task_name" character varying, "date_needed" date, "location" character varying, "duration" character varying, "details" character varying, "phone" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "elder_id" integer, "volunteer_name" character varying, "volunteer_phone" character varying, "volunteer_email" character varying)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170911030157)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170908153902),
+(20170908154440),
+(20170908190703),
+(20170908193256),
+(20170909205725);
+
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-11 15:05:11.813836"], ["updated_at", "2017-09-11 15:05:11.813836"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Haylee King"], ["phone", "(798) 240-8837"], ["email", "jan_koepp@example.net"], ["created_at", "2017-09-11 15:05:12.494000"], ["updated_at", "2017-09-11 15:05:12.494000"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dr. Imogene Sporer"], ["phone", "1-346-329-6852"], ["email", "eva@example.com"], ["created_at", "2017-09-11 15:05:12.554182"], ["updated_at", "2017-09-11 15:05:12.554182"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lafayette Kuhn"], ["phone", "(142) 056-0861"], ["email", "kian@example.net"], ["created_at", "2017-09-11 15:05:12.568485"], ["updated_at", "2017-09-11 15:05:12.568485"]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.6ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "IT"], ["date_needed", "2017-09-29"], ["location", "37002"], ["duration", "3.09"], ["details", "Chicharrones tattooed ramps iphone art party poutine mixtape."], ["phone", "1-471-662-1348"], ["email", "lorna.lakin@example.org"], ["created_at", "2017-09-11 15:05:12.579811"], ["updated_at", "2017-09-11 15:05:12.579811"], ["elder_id", 1], ["volunteer_name", "Ms. Nicholaus Mosciski"], ["volunteer_phone", "1-313-860-6315 x33872"], ["volunteer_email", "una@example.net"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Cassie Lowe"], ["phone", "1-653-674-7803"], ["email", "mohamed@example.org"], ["created_at", "2017-09-11 15:05:12.592296"], ["updated_at", "2017-09-11 15:05:12.592296"]]
+  [1m[35m (11.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Levi Davis"], ["phone", "391.856.7299 x632"], ["email", "roger_mitchell@example.net"], ["created_at", "2017-09-11 15:05:12.611511"], ["updated_at", "2017-09-11 15:05:12.611511"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jarret Barrows"], ["phone", "(690) 427-7608 x57821"], ["email", "greg_reichel@example.com"], ["created_at", "2017-09-11 15:05:12.619665"], ["updated_at", "2017-09-11 15:05:12.619665"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Hospitality"], ["date_needed", "2017-09-23"], ["location", "80530-2644"], ["duration", "11.95"], ["details", "Occupy thundercats single-origin coffee heirloom kinfolk mumblecore kombucha."], ["phone", "1-114-883-9535 x68027"], ["email", "florine@example.com"], ["created_at", "2017-09-11 15:05:12.623796"], ["updated_at", "2017-09-11 15:05:12.623796"], ["elder_id", 1], ["volunteer_name", "Dasia Schimmel"], ["volunteer_phone", "247.803.4669 x69530"], ["volunteer_email", "shawn@example.com"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Emmie Dicki"], ["phone", "669-200-8565 x3627"], ["email", "rachel_marquardt@example.com"], ["created_at", "2017-09-11 15:05:12.627067"], ["updated_at", "2017-09-11 15:05:12.627067"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Alia Hartmann"], ["phone", "1-869-076-8204 x27084"], ["email", "hilario@example.com"], ["created_at", "2017-09-11 15:05:12.633237"], ["updated_at", "2017-09-11 15:05:12.633237"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tyrell Reichel"], ["phone", "1-925-390-4707"], ["email", "marvin@example.com"], ["created_at", "2017-09-11 15:05:12.638710"], ["updated_at", "2017-09-11 15:05:12.638710"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Retail"], ["date_needed", "2017-09-13"], ["location", "24599"], ["duration", "1.1"], ["details", "Mixtape letterpress put a bird on it carry."], ["phone", "383.768.6843"], ["email", "sherwood_schneider@example.net"], ["created_at", "2017-09-11 15:05:12.642701"], ["updated_at", "2017-09-11 15:05:12.642701"], ["elder_id", 8], ["volunteer_name", "Watson D'Amore"], ["volunteer_phone", "(298) 355-8579"], ["volunteer_email", "merl.prosacco@example.org"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ms. Audie Miller"], ["phone", "847.981.0530"], ["email", "clovis@example.com"], ["created_at", "2017-09-11 15:05:12.645646"], ["updated_at", "2017-09-11 15:05:12.645646"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Consulting"], ["date_needed", "2017-09-19"], ["location", "90780-6265"], ["duration", "61.75"], ["details", "Pickled pour-over organic thundercats craft beer plaid."], ["phone", "(979) 368-0818"], ["email", "ofelia_mueller@example.org"], ["created_at", "2017-09-11 15:05:12.649839"], ["updated_at", "2017-09-11 15:05:12.649839"], ["elder_id", 10], ["volunteer_name", "Paul Hoppe IV"], ["volunteer_phone", "1-284-599-2290 x52441"], ["volunteer_email", "roscoe@example.org"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Doug Thompson I"], ["phone", "499-938-0383"], ["email", "dereck@example.net"], ["created_at", "2017-09-11 15:05:27.824330"], ["updated_at", "2017-09-11 15:05:27.824330"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Government"], ["date_needed", "2017-09-28"], ["location", "97233"], ["duration", "11.31"], ["details", "Carry yolo phlogiston cred plaid selfies."], ["phone", "1-242-199-4630"], ["email", "desmond@example.org"], ["created_at", "2017-09-11 15:05:27.881846"], ["updated_at", "2017-09-11 15:05:27.881846"], ["elder_id", 4], ["volunteer_name", "Mr. Avery Bailey"], ["volunteer_phone", "(751) 577-8850 x803"], ["volunteer_email", "griffin@example.org"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mr. Amari Mills"], ["phone", "(414) 659-8104 x38345"], ["email", "juwan.ohara@example.org"], ["created_at", "2017-09-11 15:05:27.892405"], ["updated_at", "2017-09-11 15:05:27.892405"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.6ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Government"], ["date_needed", "2017-09-18"], ["location", "27959-7850"], ["duration", "80.04"], ["details", "Hella mlkshk messenger bag kale chips venmo."], ["phone", "719-005-3025 x46909"], ["email", "nathanial@example.com"], ["created_at", "2017-09-11 15:05:27.905754"], ["updated_at", "2017-09-11 15:05:27.905754"], ["elder_id", 9], ["volunteer_name", "Sebastian Bailey"], ["volunteer_phone", "(631) 175-0072 x375"], ["volunteer_email", "jaydon@example.com"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Isaias Stark"], ["phone", "1-234-952-6212"], ["email", "filiberto_feil@example.net"], ["created_at", "2017-09-11 15:05:27.910166"], ["updated_at", "2017-09-11 15:05:27.910166"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Marketing"], ["date_needed", "2017-09-23"], ["location", "29490-9627"], ["duration", "0.66"], ["details", "Vinegar keytar narwhal helvetica sustainable deep v."], ["phone", "792-132-1350 x2522"], ["email", "margot@example.org"], ["created_at", "2017-09-11 15:05:27.915828"], ["updated_at", "2017-09-11 15:05:27.915828"], ["elder_id", 9], ["volunteer_name", "Conrad Hintz"], ["volunteer_phone", "278-141-1985 x85617"], ["volunteer_email", "dan@example.com"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jimmy Ebert"], ["phone", "814.120.5077 x83290"], ["email", "loy_gislason@example.com"], ["created_at", "2017-09-11 15:05:27.919350"], ["updated_at", "2017-09-11 15:05:27.919350"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Marketing"], ["date_needed", "2017-09-28"], ["location", "67004"], ["duration", "36.15"], ["details", "Irony beard godard keytar yuccie farm-to-table."], ["phone", "908-577-3409"], ["email", "lola_funk@example.net"], ["created_at", "2017-09-11 15:05:27.924424"], ["updated_at", "2017-09-11 15:05:27.924424"], ["elder_id", 7], ["volunteer_name", "Mr. Grayce King"], ["volunteer_phone", "(856) 327-1173 x5346"], ["volunteer_email", "elsa_stoltenberg@example.org"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Layla Reynolds III"], ["phone", "337-585-6720"], ["email", "conrad_zemlak@example.net"], ["created_at", "2017-09-11 15:05:27.927253"], ["updated_at", "2017-09-11 15:05:27.927253"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Advertising"], ["date_needed", "2017-09-13"], ["location", "21150"], ["duration", "1.2"], ["details", "Church-key 8-bit whatever knausgaard narwhal."], ["phone", "422-963-8189"], ["email", "chet_kub@example.com"], ["created_at", "2017-09-11 15:05:27.931878"], ["updated_at", "2017-09-11 15:05:27.931878"], ["elder_id", 10], ["volunteer_name", "Miss Lucile Sanford"], ["volunteer_phone", "(653) 923-9102 x511"], ["volunteer_email", "dakota_wunsch@example.org"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Kasandra Barton II"], ["phone", "949-258-8310"], ["email", "christine_hettinger@example.net"], ["created_at", "2017-09-11 15:05:27.935543"], ["updated_at", "2017-09-11 15:05:27.935543"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Retail"], ["date_needed", "2017-09-13"], ["location", "70012"], ["duration", "89.23"], ["details", "Vinegar wolf pork belly yr."], ["phone", "437-127-6165"], ["email", "iac_daugherty@example.org"], ["created_at", "2017-09-11 15:05:27.942694"], ["updated_at", "2017-09-11 15:05:27.942694"], ["elder_id", 4], ["volunteer_name", "Deon Wyman"], ["volunteer_phone", "337.072.7170 x77336"], ["volunteer_email", "modesto_shields@example.com"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jaylen Price"], ["phone", "(707) 473-4421 x87047"], ["email", "linwood@example.net"], ["created_at", "2017-09-11 15:05:27.945795"], ["updated_at", "2017-09-11 15:05:27.945795"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "IT"], ["date_needed", "2017-09-12"], ["location", "72474-5089"], ["duration", "13.22"], ["details", "Meditation chia trust fund squid echo."], ["phone", "125.482.1649 x792"], ["email", "dallas@example.com"], ["created_at", "2017-09-11 15:05:27.950031"], ["updated_at", "2017-09-11 15:05:27.950031"], ["elder_id", 3], ["volunteer_name", "Jimmy Mayer MD"], ["volunteer_phone", "1-478-075-7037"], ["volunteer_email", "einar.ko@example.net"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Matt Wisoky"], ["phone", "1-739-126-3800"], ["email", "keagan.smitham@example.com"], ["created_at", "2017-09-11 15:05:27.952831"], ["updated_at", "2017-09-11 15:05:27.952831"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Real-Estate"], ["date_needed", "2017-09-14"], ["location", "62084"], ["duration", "4.34"], ["details", "Flexitarian before they sold out stumptown fanny pack salvia kombucha."], ["phone", "835.800.9184 x59149"], ["email", "candice.haley@example.net"], ["created_at", "2017-09-11 15:05:27.957938"], ["updated_at", "2017-09-11 15:05:27.957938"], ["elder_id", 1], ["volunteer_name", "Joesph Hirthe"], ["volunteer_phone", "479.849.3315"], ["volunteer_email", "harmon@example.net"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gilbert Bartell"], ["phone", "549.760.5534 x60767"], ["email", "elmira_lind@example.com"], ["created_at", "2017-09-11 15:05:27.960630"], ["updated_at", "2017-09-11 15:05:27.960630"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Mining"], ["date_needed", "2017-09-15"], ["location", "17265"], ["duration", "95.53"], ["details", "Asymmetrical shoreditch actually lumbersexual lo-fi."], ["phone", "1-581-413-4141 x474"], ["email", "myrna.lebsack@example.net"], ["created_at", "2017-09-11 15:05:27.964693"], ["updated_at", "2017-09-11 15:05:27.964693"], ["elder_id", 7], ["volunteer_name", "Callie Monahan"], ["volunteer_phone", "601.506.5900"], ["volunteer_email", "marlen@example.org"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dr. Carey Huel"], ["phone", "609-790-6998"], ["email", "brittany@example.net"], ["created_at", "2017-09-11 15:05:27.967697"], ["updated_at", "2017-09-11 15:05:27.967697"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Retail"], ["date_needed", "2017-09-27"], ["location", "38898-5829"], ["duration", "10.28"], ["details", "Ugh tattooed lomo 3 wolf moon."], ["phone", "(359) 539-6919 x27125"], ["email", "emmet@example.com"], ["created_at", "2017-09-11 15:05:27.972298"], ["updated_at", "2017-09-11 15:05:27.972298"], ["elder_id", 9], ["volunteer_name", "Jaqueline Bruen"], ["volunteer_phone", "884-197-0571"], ["volunteer_email", "dandre.wiza@example.com"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/tasks" for 127.0.0.1 at 2017-09-11 10:06:03 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mElder Load (1.8ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mElder Load (3.1ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.7ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 200 OK in 116ms (Views: 0.2ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-11 10:06:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders" for 127.0.0.1 at 2017-09-11 10:06:10 -0500
+Processing by EldersController#index as HTML
+  [1m[36mElder Load (0.7ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+Completed 200 OK in 100ms (Views: 0.1ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/elders1/tasks" for 127.0.0.1 at 2017-09-11 10:06:16 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/elders1/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/1/tasks" for 127.0.0.1 at 2017-09-11 10:06:39 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/1/tasks"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-11 10:06:50 -0500
+Processing by TasksController#index as HTML
+  Parameters: {"elder_id"=>"1"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 200 OK in 170ms (Views: 0.2ms | ActiveRecord: 19.5ms)
+
+
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (208.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "elder_helper_app_api_development"[0m
+  [1m[35m (196.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "elder_helper_app_api_test"[0m
+  [1m[35m (638.3ms)[0m  [1m[35mCREATE DATABASE "elder_helper_app_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (404.6ms)[0m  [1m[35mCREATE DATABASE "elder_helper_app_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "elders" CASCADE[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "elders" ("id" bigserial primary key, "name" character varying, "phone" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "task_name" character varying, "date_needed" date, "location" character varying, "duration" character varying, "details" character varying, "phone" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "elder_id" integer, "volunteer_name" character varying, "volunteer_phone" character varying, "volunteer_email" character varying)[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170911030157)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170908153902),
+(20170908154440),
+(20170908190703),
+(20170908193256),
+(20170909205725);
+
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-11 15:12:47.246191"], ["updated_at", "2017-09-11 15:12:47.246191"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "elders" CASCADE[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "elders" ("id" bigserial primary key, "name" character varying, "phone" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "tasks" CASCADE[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "task_name" character varying, "date_needed" date, "location" character varying, "duration" character varying, "details" character varying, "phone" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "elder_id" integer, "volunteer_name" character varying, "volunteer_phone" character varying, "volunteer_email" character varying)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170911030157)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170908153902),
+(20170908154440),
+(20170908190703),
+(20170908193256),
+(20170909205725);
+
+[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-11 15:12:47.326891"], ["updated_at", "2017-09-11 15:12:47.326891"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ray Nienow DVM"], ["phone", "997-525-7090 x08067"], ["email", "ewell@example.org"], ["created_at", "2017-09-11 15:12:48.007923"], ["updated_at", "2017-09-11 15:12:48.007923"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Richmond Mueller II"], ["phone", "(872) 160-5799"], ["email", "joesph_swift@example.com"], ["created_at", "2017-09-11 15:12:48.073261"], ["updated_at", "2017-09-11 15:12:48.073261"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Devan Koch DVM"], ["phone", "1-324-308-3427"], ["email", "kitty_leuschke@example.com"], ["created_at", "2017-09-11 15:12:48.087104"], ["updated_at", "2017-09-11 15:12:48.087104"]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.6ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sammy Lind"], ["phone", "(565) 272-5170"], ["email", "ahmed@example.com"], ["created_at", "2017-09-11 15:12:48.102564"], ["updated_at", "2017-09-11 15:12:48.102564"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Legal"], ["date_needed", "2017-09-22"], ["location", "81704"], ["duration", "98.37"], ["details", "Poutine biodiesel bitters kitsch helvetica brunch everyday flannel chartreuse."], ["phone", "978-978-3714"], ["email", "henriette_hilpert@example.org"], ["created_at", "2017-09-11 15:12:48.107969"], ["updated_at", "2017-09-11 15:12:48.107969"], ["elder_id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sydnee Rodriguez"], ["phone", "614-582-0897 x767"], ["email", "paolo.erdman@example.net"], ["created_at", "2017-09-11 15:12:48.111652"], ["updated_at", "2017-09-11 15:12:48.111652"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Andrew Hermiston"], ["phone", "1-754-706-0318 x94244"], ["email", "jordi_keeling@example.org"], ["created_at", "2017-09-11 15:12:48.118225"], ["updated_at", "2017-09-11 15:12:48.118225"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Leonor Armstrong"], ["phone", "(954) 241-7533 x3145"], ["email", "osbaldo_gutmann@example.net"], ["created_at", "2017-09-11 15:12:48.123813"], ["updated_at", "2017-09-11 15:12:48.123813"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Community-Services"], ["date_needed", "2017-10-01"], ["location", "37590-9730"], ["duration", "62.97"], ["details", "Cliche locavore tousled distillery kitsch art party iphone try-hard."], ["phone", "(545) 567-7705"], ["email", "reie_schneider@example.com"], ["created_at", "2017-09-11 15:12:48.129272"], ["updated_at", "2017-09-11 15:12:48.129272"], ["elder_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Orie Hilll"], ["phone", "451.416.8443 x82659"], ["email", "emily@example.org"], ["created_at", "2017-09-11 15:12:48.132804"], ["updated_at", "2017-09-11 15:12:48.132804"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Construction"], ["date_needed", "2017-09-23"], ["location", "21290"], ["duration", "75.2"], ["details", "Sartorial venmo yr umami roof."], ["phone", "805.348.6811 x69741"], ["email", "sallie@example.net"], ["created_at", "2017-09-11 15:12:48.136634"], ["updated_at", "2017-09-11 15:12:48.136634"], ["elder_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ivory Zieme"], ["phone", "(838) 857-3545"], ["email", "cordell@example.com"], ["created_at", "2017-09-11 15:12:48.139299"], ["updated_at", "2017-09-11 15:12:48.139299"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Retail"], ["date_needed", "2017-09-26"], ["location", "39573-3334"], ["duration", "93.65"], ["details", "Chillwave pug offal farm-to-table."], ["phone", "(725) 408-6498"], ["email", "kellie.erdman@example.net"], ["created_at", "2017-09-11 15:12:48.142918"], ["updated_at", "2017-09-11 15:12:48.142918"], ["elder_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Colin Kuvalis"], ["phone", "564.243.3686"], ["email", "marley_jacobson@example.com"], ["created_at", "2017-09-11 15:12:48.145987"], ["updated_at", "2017-09-11 15:12:48.145987"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Government"], ["date_needed", "2017-09-30"], ["location", "97365-6601"], ["duration", "38.5"], ["details", "Taxidermy retro quinoa farm-to-table."], ["phone", "1-270-436-9690"], ["email", "kristy.braun@example.org"], ["created_at", "2017-09-11 15:12:48.149909"], ["updated_at", "2017-09-11 15:12:48.149909"], ["elder_id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Rollin O'Keefe"], ["phone", "214-649-8178 x078"], ["email", "golden.kiehn@example.net"], ["created_at", "2017-09-11 15:12:52.960024"], ["updated_at", "2017-09-11 15:12:52.960024"]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Mining"], ["date_needed", "2017-09-24"], ["location", "41486-1718"], ["duration", "17.88"], ["details", "Fashion axe wes anderson cardigan waistcoat echo."], ["phone", "1-436-461-3979"], ["email", "franz@example.com"], ["created_at", "2017-09-11 15:12:53.004989"], ["updated_at", "2017-09-11 15:12:53.004989"], ["elder_id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Milford Huel"], ["phone", "646-102-2798 x2082"], ["email", "leann@example.net"], ["created_at", "2017-09-11 15:12:53.010011"], ["updated_at", "2017-09-11 15:12:53.010011"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Manufacturing"], ["date_needed", "2017-09-19"], ["location", "41882"], ["duration", "19.49"], ["details", "Post-ironic keffiyeh pinterest fixie squid."], ["phone", "1-887-399-7508 x163"], ["email", "larue_stanton@example.org"], ["created_at", "2017-09-11 15:12:53.014329"], ["updated_at", "2017-09-11 15:12:53.014329"], ["elder_id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Emmett Littel"], ["phone", "(459) 374-7157 x97537"], ["email", "lou_hermiston@example.org"], ["created_at", "2017-09-11 15:12:53.017232"], ["updated_at", "2017-09-11 15:12:53.017232"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Advertising"], ["date_needed", "2017-09-19"], ["location", "52561"], ["duration", "35.45"], ["details", "Brunch microdosing tacos bitters trust fund roof pickled."], ["phone", "1-178-948-9320"], ["email", "haleigh_kilback@example.com"], ["created_at", "2017-09-11 15:12:53.020903"], ["updated_at", "2017-09-11 15:12:53.020903"], ["elder_id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Shaina Terry IV"], ["phone", "660.678.5882 x6988"], ["email", "carmelo.gerlach@example.org"], ["created_at", "2017-09-11 15:12:53.024070"], ["updated_at", "2017-09-11 15:12:53.024070"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Consulting"], ["date_needed", "2017-09-24"], ["location", "87603-9125"], ["duration", "26.19"], ["details", "Xoxo cliche occupy cold-pressed offal."], ["phone", "(541) 378-4657 x751"], ["email", "porter_deckow@example.net"], ["created_at", "2017-09-11 15:12:53.029863"], ["updated_at", "2017-09-11 15:12:53.029863"], ["elder_id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ismael Rohan"], ["phone", "(305) 039-5880 x7625"], ["email", "benjamin_labadie@example.org"], ["created_at", "2017-09-11 15:12:53.033058"], ["updated_at", "2017-09-11 15:12:53.033058"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Hospitality"], ["date_needed", "2017-09-30"], ["location", "44055"], ["duration", "31.44"], ["details", "Mumblecore vinyl slow-carb mlkshk cred."], ["phone", "(155) 710-8714 x582"], ["email", "maverick@example.net"], ["created_at", "2017-09-11 15:12:53.036557"], ["updated_at", "2017-09-11 15:12:53.036557"], ["elder_id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Molly Stroman"], ["phone", "309.039.6510"], ["email", "armani@example.org"], ["created_at", "2017-09-11 15:12:53.039643"], ["updated_at", "2017-09-11 15:12:53.039643"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Technology"], ["date_needed", "2017-09-22"], ["location", "54659-4233"], ["duration", "1.48"], ["details", "Pabst flannel artisan selfies slow-carb."], ["phone", "(763) 970-3513 x44825"], ["email", "elinore@example.com"], ["created_at", "2017-09-11 15:12:53.043903"], ["updated_at", "2017-09-11 15:12:53.043903"], ["elder_id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Savanna Connelly Jr."], ["phone", "(954) 114-1319 x04329"], ["email", "jeremy@example.org"], ["created_at", "2017-09-11 15:12:53.046557"], ["updated_at", "2017-09-11 15:12:53.046557"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Technology"], ["date_needed", "2017-09-17"], ["location", "45397"], ["duration", "23.83"], ["details", "Etsy craft beer gentrify synth whatever thundercats vinyl."], ["phone", "397.464.1171 x985"], ["email", "triston@example.com"], ["created_at", "2017-09-11 15:12:53.050279"], ["updated_at", "2017-09-11 15:12:53.050279"], ["elder_id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Velma Lockman"], ["phone", "903-729-3269 x067"], ["email", "bernadine_heller@example.org"], ["created_at", "2017-09-11 15:12:53.052951"], ["updated_at", "2017-09-11 15:12:53.052951"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Retail"], ["date_needed", "2017-09-28"], ["location", "73107"], ["duration", "93.01"], ["details", "Wayfarers deep v chambray distillery next level celiac blue bottle."], ["phone", "(467) 498-5912 x4263"], ["email", "euna@example.net"], ["created_at", "2017-09-11 15:12:53.056948"], ["updated_at", "2017-09-11 15:12:53.056948"], ["elder_id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dwight Halvorson"], ["phone", "660.292.5388 x5187"], ["email", "salvador.wyman@example.net"], ["created_at", "2017-09-11 15:12:53.060085"], ["updated_at", "2017-09-11 15:12:53.060085"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Marketing"], ["date_needed", "2017-09-23"], ["location", "45832"], ["duration", "68.49"], ["details", "Jean shorts echo yr muggle magic kogi literally farm-to-table mlkshk."], ["phone", "1-224-967-9007 x5554"], ["email", "clara@example.com"], ["created_at", "2017-09-11 15:12:53.064096"], ["updated_at", "2017-09-11 15:12:53.064096"], ["elder_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "elders" ("name", "phone", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Keely Kohler Sr."], ["phone", "514-053-2694 x243"], ["email", "delilah.farrell@example.org"], ["created_at", "2017-09-11 15:12:53.066697"], ["updated_at", "2017-09-11 15:12:53.066697"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["task_name", "Consulting"], ["date_needed", "2017-09-15"], ["location", "58975"], ["duration", "8.83"], ["details", "Poutine craft beer yr lumbersexual 3 wolf moon ennui plaid knausgaard."], ["phone", "(574) 720-5856 x9528"], ["email", "cole_zieme@example.com"], ["created_at", "2017-09-11 15:12:53.070318"], ["updated_at", "2017-09-11 15:12:53.070318"], ["elder_id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-11 10:13:03 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Parameters: {"elder_id"=>"1"}
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mElder Load (0.8ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 105ms (Views: 0.1ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-11 10:13:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders/1/tasks" for 127.0.0.1 at 2017-09-11 10:13:48 -0500
+Processing by TasksController#index as HTML
+  Parameters: {"elder_id"=>"1"}
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 0.1ms | ActiveRecord: 24.8ms)
+
+
