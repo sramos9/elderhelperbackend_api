@@ -3910,6 +3910,7 @@ Completed 200 OK in 132ms (Views: 4.1ms | ActiveRecord: 7.0ms)
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
   [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+<<<<<<< HEAD
 Started GET "/elders" for 127.0.0.1 at 2017-09-12 13:09:31 -0500
   [1m[35m (17.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by EldersController#index as HTML
@@ -4932,3 +4933,5 @@ Filter chain halted as :authenticate_token rendered or redirected
 Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.8ms)
 
 
+=======
+>>>>>>> ac54f01... reseeded with empty strings

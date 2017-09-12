@@ -25,7 +25,7 @@ end
   # GET /elders/1
   def show
      render json: @elder
-    #  .to_json(include: :tasks)
+     #.to_json(include: :tasks)
     # render json: get_current_elder
   end
 
