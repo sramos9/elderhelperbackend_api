@@ -17,6 +17,11 @@ ActiveRecord::Schema.define(version: 20170911213717) do
 
   create_table "elders", force: :cascade do |t|
     t.string "name"
+    t.string "title"
+    t.string "location"
+    t.string "duration"
+    t.string "details"
+    t.date "date_needed"
     t.string "phone"
     t.string "email"
     t.datetime "created_at", null: false
