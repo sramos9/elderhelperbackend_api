@@ -9,8 +9,10 @@
 10.times do
   Elder.create(
     name: Faker::Name.name,
+    username: 'test',
+    password: 'test',
 
-    phone: Faker::PhoneNumber.phone_number,
+    # phone: Faker::PhoneNumber.phone_number,
     email: Faker::Internet.safe_email
   )
 end
@@ -24,9 +26,9 @@ end
     details: Faker::Hipster.sentence,
     phone: Faker::PhoneNumber.phone_number,
     email: Faker::Internet.safe_email,
-    volunteer_name: '',
-    volunteer_phone: '',
-    volunteer_email: '',
+    volunteer_name: Faker::Name.name,
+    volunteer_phone: "",
+    volunteer_email: "",
     elder_id: Faker::Number.between(1, 10)
   )
 end
