@@ -10,18 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170911213717) do
+ActiveRecord::Schema.define(version: 20170912201527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "elders", force: :cascade do |t|
     t.string "name"
-    t.string "title"
-    t.string "location"
-    t.string "duration"
-    t.string "details"
-    t.date "date_needed"
     t.string "phone"
     t.string "email"
     t.datetime "created_at", null: false

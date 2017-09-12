@@ -4935,3 +4935,355 @@ Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.8ms)
 
 =======
 >>>>>>> ac54f01... reseeded with empty strings
+Started GET "/elders/1" for 127.0.0.1 at 2017-09-12 13:41:08 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mElder Load (6.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 67ms (Views: 1.0ms | ActiveRecord: 26.5ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 13:41:15 -0500
+Processing by EldersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-12 13:41:26 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (3.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 85ms (Views: 0.2ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 13:42:05 -0500
+Processing by EldersController#index as */*
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 13:42:22 -0500
+Processing by EldersController#index as */*
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-12 13:42:32 -0500
+Processing by TasksController#index as */*
+  [1m[36mTask Load (12.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 54ms (Views: 0.3ms | ActiveRecord: 12.3ms)
+
+
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.6ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.7ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/tasks" for 127.0.0.1 at 2017-09-12 13:43:24 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (2.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-12 13:43:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (17.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (16.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (16.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/tasks" for 127.0.0.1 at 2017-09-12 13:44:30 -0500
+Started GET "/tasks" for 127.0.0.1 at 2017-09-12 13:44:40 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 34ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-12 13:45:12 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (2.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-12 13:46:01 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (5.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Completed 200 OK in 50ms (Views: 2.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 13:46:13 -0500
+Processing by EldersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/elders/1" for 127.0.0.1 at 2017-09-12 13:46:21 -0500
+Processing by EldersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mElder Load (0.8ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 144ms (Views: 0.5ms | ActiveRecord: 22.0ms)
+
+
+  [1m[35m (17.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (18.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveColumnsFromElder (20170912201527)
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.4ms)[0m  [1m[35mALTER TABLE "elder" DROP "title"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6946787360337263670)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveColumnsFromElder (20170912201527)
+  [1m[35m (6.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (110.2ms)[0m  [1m[35mALTER TABLE "elders" DROP "title"[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "elders" DROP "location"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "elders" DROP "duration"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "elders" DROP "details"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "elders" DROP "date_needed"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170912201527"]]
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6946787360337263670)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (7.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Retail"], ["date_needed", "2017-09-20"], ["location", "32836"], ["duration", "10.51"], ["details", "Art party disrupt asymmetrical sustainable hella waistcoat polaroid roof cardigan."], ["phone", "478-490-1728 x60670"], ["email", "lura.terry@example.com"], ["created_at", "2017-09-12 20:27:54.064148"], ["updated_at", "2017-09-12 20:27:54.064148"], ["elder_id", 1], ["volunteer_name", ""], ["volunteer_phone", ""], ["volunteer_email", ""]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Mining"], ["date_needed", "2017-09-13"], ["location", "21326-7459"], ["duration", "85.79"], ["details", "Tofu listicle chambray messenger bag street cardigan austin gentrify."], ["phone", "231.788.0713 x1235"], ["email", "patrick@example.net"], ["created_at", "2017-09-12 20:27:54.103916"], ["updated_at", "2017-09-12 20:27:54.103916"], ["elder_id", 1], ["volunteer_name", ""], ["volunteer_phone", ""], ["volunteer_email", ""]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.4ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mElder Load (0.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("task_name", "date_needed", "location", "duration", "details", "phone", "email", "created_at", "updated_at", "elder_id", "volunteer_name", "volunteer_phone", "volunteer_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["task_name", "Advertising"], ["date_needed", "2017-10-01"], ["location", "55759-5557"], ["duration", "99.9"], ["details", "Master organic disrupt brunch."], ["phone", "(776) 053-0210 x0011"], ["email", "marta@example.org"], ["created_at", "2017-09-12 20:27:54.113427"], ["updated_at", "2017-09-12 20:27:54.113427"], ["elder_id", 1], ["volunteer_name", ""], ["volunteer_phone", ""], ["volunteer_email", ""]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/elders/1" for 127.0.0.1 at 2017-09-12 15:28:14 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mElder Load (1.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 37ms (Views: 0.7ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-12 15:28:16 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 15:28:19 -0500
+Processing by EldersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-12 15:28:23 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 101ms (Views: 0.1ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-12 15:31:06 -0500
+Processing by TasksController#index as */*
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mElder Load (1.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 0.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/elder" for 127.0.0.1 at 2017-09-12 15:31:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/elder"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 15:31:16 -0500
+Processing by EldersController#index as */*
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-12 15:31:29 -0500
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Elder Load (0.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
