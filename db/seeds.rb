@@ -13,8 +13,9 @@
     phone: Faker::PhoneNumber.phone_number,
     email: Faker::Internet.safe_email
   )
+end
 
-
+10.times do
   Task.create(
     task_name: Faker::Job.field,
     date_needed: Faker::Date.forward(20),
