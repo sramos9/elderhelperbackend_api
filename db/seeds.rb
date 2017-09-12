@@ -15,18 +15,18 @@
   )
 end
 
-10.times do
-  Task.create(
-    task_name: Faker::Job.field,
-    date_needed: Faker::Date.forward(20),
-    location: Faker::Address.zip,
-    duration: Faker::Commerce.price,
-    details: Faker::Hipster.sentence,
-    phone: Faker::PhoneNumber.phone_number,
-    email: Faker::Internet.safe_email,
-    volunteer_name: '',
-    volunteer_phone: '',
-    volunteer_email: '',
-    elder_id: Faker::Number.between(1, 10)
-  )
-end
+# 10.times do
+#   Task.create(
+#     task_name: Faker::Job.field,
+#     date_needed: Faker::Date.forward(20),
+#     location: Faker::Address.zip,
+#     duration: Faker::Commerce.price,
+#     details: Faker::Hipster.sentence,
+#     phone: Faker::PhoneNumber.phone_number,
+#     email: Faker::Internet.safe_email,
+#     volunteer_name: '',
+#     volunteer_phone: '',
+#     volunteer_email: '',
+#     elder_id: Faker::Number.between(1, 10)
+#   )
+# end
