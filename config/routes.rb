@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   resources :elders do
     resources :tasks
   end
-    #  -------------------------------------------------
+  resources :elders do
+    collection do
+      post '/login', to: 'elders#login'
+    end
+  end # -------------------------------------------------
   # nesting tasks because it belongs to elder and only an elser can create a task ...
   #  --------------is this right? ----------------------------------------
 

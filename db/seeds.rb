@@ -23,6 +23,9 @@
     details: Faker::Hipster.sentence,
     phone: Faker::PhoneNumber.phone_number,
     email: Faker::Internet.safe_email,
+    volunteer_name: '',
+    volunteer_phone: '',
+    volunteer_email: '',
     elder_id: Faker::Number.between(1, 10)
   )
 end

@@ -1,3 +1,5 @@
+
+
 require_relative 'boot'
 
 require "rails"
@@ -18,6 +20,8 @@ Bundler.require(*Rails.groups)
 
 module ElderHelperAppApi
   class Application < Rails::Application
+
+    config.time_zone = 'Eastern Time (US & Canada)'
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
@@ -29,5 +33,6 @@ module ElderHelperAppApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    ENV['JWT_SECRET']
   end
 end

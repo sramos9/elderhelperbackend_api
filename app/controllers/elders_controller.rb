@@ -1,5 +1,19 @@
 class EldersController < ApplicationController
   before_action :set_elder, only: [:show, :update, :destroy]
+  before_action :authenticate_token, except: [:login, :create]
+  before_action :authorize_elder, except: [:login, :create, :index]
+
+  #elder login, /login
+  def login
+    elder = Elder.find_by(username: params[:elder][:username])
+    if elder && elder.authenticate(params[:elder][:password])
+      token = create_token(elder.id, elder.username)
+      render json: {status: 200, token: token, elder: elder}
+    else
+      render json: {status: 401, message: "Unauthorized"}
+    end
+end
+
 
   # GET /elders
   def index
@@ -10,7 +24,9 @@ class EldersController < ApplicationController
 
   # GET /elders/1
   def show
-    render json: @elder.to_json(include: :tasks)
+     render json: @elder
+     #.to_json(include: :tasks)
+    # render json: get_current_elder
   end
 
   # POST /elders
@@ -40,6 +56,23 @@ class EldersController < ApplicationController
   end
 
   private
+
+  def create_token(id, username)
+    JWT.encode(payload(id, username), ENV['JWT_SECRET'], 'HS256')
+  end
+
+  def payload(id, username)
+    {
+      exp: (Time.now + 30.minutes).to_i,
+      iat: Time.now.to_i,
+      iss: ENV['JWT_ISSUER'],
+      elder: {
+        id: id,
+        username: username
+      }
+    }
+  end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_elder
       @elder = Elder.find(params[:id])
@@ -47,6 +80,6 @@ class EldersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def elder_params
-      params.require(:elder).permit(:name, :phone, :email)
+      params.require(:elder).permit(:name, :phone, :email, :username, :password)
     end
 end
