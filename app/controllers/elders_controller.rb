@@ -5,11 +5,17 @@ class EldersController < ApplicationController
 
   #elder login, /login
   def login
-    elder = Elder.find_by(username: params[:elder][:username])
-    if elder && elder.authenticate(params[:elder][:password])
+    puts 'testing'
+    puts params[:elders][:username]
+    elder = Elder.find_by(username: params[:elders][:username])
+    puts 'on line 10'
+    puts elder
+    if elder && elder.authenticate(params[:elders][:password])
+      puts 'line 14'
       token = create_token(elder.id, elder.username)
       render json: {status: 200, token: token, elder: elder}
     else
+      puts 'inside of else line 18'
       render json: {status: 401, message: "Unauthorized"}
     end
 end
@@ -17,6 +23,7 @@ end
 
   # GET /elders
   def index
+    puts 'index'
     @elders = Elder.all
 
     render json: @elders.to_json(include: :tasks)
@@ -80,6 +87,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def elder_params
-      params.require(:elder).permit(:name, :phone, :email, :username, :password)
+      params.require(:elder).permit(:name,  :email, :username, :password)
     end
 end

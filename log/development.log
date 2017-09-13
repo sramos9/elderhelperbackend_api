@@ -6379,3 +6379,688 @@ Processing by EldersController#index as HTML
 Completed 200 OK in 336ms (Views: 0.4ms | ActiveRecord: 57.9ms)
 
 
+Started PUT "/elders/1/tasks/1" for 127.0.0.1 at 2017-09-12 19:29:44 -0500
+Processing by TasksController#update as */*
+  Parameters: {"tasks"=>{"volunteer_name"=>"john"}, "elder_id"=>"1", "id"=>"1"}
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 176ms (ActiveRecord: 109.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:62:in `task_params'
+app/controllers/tasks_controller.rb:40:in `update'
+Started PUT "/elders/1/tasks/1" for 127.0.0.1 at 2017-09-12 19:31:13 -0500
+Processing by TasksController#update as */*
+  Parameters: {"tasks"=>{"task_name"=>"sjflskfjs"}, "elder_id"=>"1", "id"=>"1"}
+  [1m[36mTask Load (3.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 39ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:62:in `task_params'
+app/controllers/tasks_controller.rb:40:in `update'
+Started PUT "/elders/1/tasks/1" for 127.0.0.1 at 2017-09-12 19:31:30 -0500
+Processing by TasksController#update as */*
+  Parameters: {"tasks"=>{"task_name"=>"sjflskfjs"}, "elder_id"=>"1", "id"=>"1"}
+  [1m[36mTask Load (6.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 18ms (ActiveRecord: 6.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:62:in `task_params'
+app/controllers/tasks_controller.rb:40:in `update'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 19:32:17 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:8:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 19:32:56 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:8:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 19:33:24 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"bob", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:8:in `login'
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 19:47:38 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#index as HTML
+Filter chain halted as :authenticate_token rendered or redirected
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-12 19:47:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 19:47:50 -0500
+Processing by EldersController#login as HTML
+  Parameters: {"elder"=>{"username"=>"tom", "password"=>"[FILTERED]"}}
+  [1m[36mElder Load (6.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "tom"], ["LIMIT", 1]]
+Completed 200 OK in 206ms (Views: 1.0ms | ActiveRecord: 50.0ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 19:47:56 -0500
+Processing by EldersController#index as HTML
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (3.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 21]]
+Completed 200 OK in 140ms (Views: 0.1ms | ActiveRecord: 18.3ms)
+
+
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 19:48:05 -0500
+Processing by EldersController#login as HTML
+  Parameters: {"elder"=>{"username"=>"tom", "password"=>"[FILTERED]"}}
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "tom"], ["LIMIT", 1]]
+Completed 200 OK in 100ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 19:48:15 -0500
+Processing by EldersController#index as HTML
+  [1m[36mElder Load (1.3ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (4.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (2.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 21]]
+Completed 200 OK in 83ms (Views: 0.1ms | ActiveRecord: 16.4ms)
+
+
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 19:48:59 -0500
+Processing by EldersController#login as HTML
+  Parameters: {"elder"=>{"username"=>"tom", "password"=>"[FILTERED]"}}
+  [1m[36mElder Load (1.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "tom"], ["LIMIT", 1]]
+Completed 200 OK in 152ms (Views: 7.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 19:49:14 -0500
+Processing by EldersController#index as HTML
+  [1m[36mElder Load (0.7ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (4.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (2.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 21]]
+Completed 200 OK in 148ms (Views: 0.2ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 19:51:51 -0500
+Processing by EldersController#login as HTML
+  Parameters: {"elder"=>{"username"=>"tom", "password"=>"[FILTERED]"}}
+  [1m[36mElder Load (1.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "tom"], ["LIMIT", 1]]
+Completed 200 OK in 137ms (Views: 10.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 20:16:25 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#index as HTML
+  [1m[36mElder Load (6.9ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (1.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 21]]
+Completed 200 OK in 186ms (Views: 0.2ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-09-12 20:16:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.1) lib/rack/cors.rb:93:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 20:17:09 -0500
+Processing by EldersController#index as */*
+  [1m[36mElder Load (0.9ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 21]]
+Completed 200 OK in 243ms (Views: 1.0ms | ActiveRecord: 33.0ms)
+
+
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:17:35 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"bob", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:8:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:19:51 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"bob", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:9:in `login'
+  [1m[36mElder Load (0.7ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+  [1m[36mElder Load (0.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mElder Load (1.3ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "tom"], ["LIMIT", 1]]
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:23:18 -0500
+  [1m[35m (10.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:9:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:23:38 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:9:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:23:59 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:9:in `login'
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 20:25:45 -0500
+Processing by EldersController#index as */*
+  [1m[36mElder Load (5.5ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+  [1m[36mTask Load (5.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 21]]
+Completed 200 OK in 226ms (Views: 0.5ms | ActiveRecord: 38.2ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 20:26:09 -0500
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#index as */*
+  [1m[36mElder Load (1.1ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 21]]
+Completed 200 OK in 270ms (Views: 0.4ms | ActiveRecord: 24.2ms)
+
+
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:27:16 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:9:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:28:23 -0500
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:9:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:28:38 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:9:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:29:19 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:9:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:29:45 -0500
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:9:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:30:55 -0500
+  [1m[35m (8.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:9:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:31:28 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:9:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:36:45 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:9:in `login'
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 20:45:13 -0500
+Processing by EldersController#index as HTML
+  [1m[36mElder Load (4.2ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (2.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (2.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 21]]
+Completed 200 OK in 658ms (Views: 0.5ms | ActiveRecord: 129.7ms)
+
+
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 20:46:21 -0500
+  [1m[35m (8.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:10:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 21:01:08 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:10:in `login'
+  [1m[36mElder Load (12.1ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "tom"], ["LIMIT", 1]]
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 21:04:56 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `username' for #<ActionController::Parameters:0x007f97feb68f30>):
+  
+app/controllers/elders_controller.rb:9:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 21:06:15 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:10:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 21:06:21 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:10:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 21:06:52 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `username' for #<ActionController::Parameters:0x007f97fe4b65e8>):
+  
+app/controllers/elders_controller.rb:9:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 21:07:08 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:10:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 21:07:45 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `username' for #<EldersController:0x007f97fdaec0f8>):
+  
+app/controllers/elders_controller.rb:10:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 21:08:17 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `elders' for #<EldersController:0x007f97fe47ddb0>
+Did you mean?  headers):
+  
+app/controllers/elders_controller.rb:10:in `login'
+  [1m[36mElder Load (5.2ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "tom"], ["LIMIT", 1]]
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 21:10:30 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+  [1m[36mElder Load (1.6ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "tom"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 47.4ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:13:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 21:10:46 -0500
+  [1m[35m (9.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+  [1m[36mElder Load (0.8ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "tom"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 6.1ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:13:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 21:12:15 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+  [1m[36mElder Load (2.1ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "tom"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/elders_controller.rb:13:in `login'
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 21:13:21 -0500
+  [1m[35m (10.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password_digest"=>"[FILTERED]"}}
+  [1m[36mElder Load (2.7ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "tom"], ["LIMIT", 1]]
+Completed 200 OK in 247ms (Views: 0.6ms | ActiveRecord: 20.5ms)
+
+
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 21:15:42 -0500
+Processing by EldersController#login as */*
+  Parameters: {"elders"=>{"username"=>"tom", "password"=>"[FILTERED]"}}
+  [1m[36mElder Load (2.5ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "tom"], ["LIMIT", 1]]
+Completed 200 OK in 356ms (Views: 6.0ms | ActiveRecord: 39.7ms)
+
+
+Started POST "/elders/" for 127.0.0.1 at 2017-09-12 21:20:11 -0500
+Processing by EldersController#create as */*
+  Parameters: {"elders"=>{"username"=>"sam", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 32ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: elder):
+  
+app/controllers/elders_controller.rb:90:in `elder_params'
+app/controllers/elders_controller.rb:41:in `create'
+Started POST "/elders/" for 127.0.0.1 at 2017-09-12 21:20:54 -0500
+Processing by EldersController#create as */*
+  Parameters: {"elders"=>{"username"=>"sam", "password"=>"[FILTERED]", "email"=>"me@me.com"}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: elder):
+  
+app/controllers/elders_controller.rb:90:in `elder_params'
+app/controllers/elders_controller.rb:41:in `create'
+Started POST "/elders/" for 127.0.0.1 at 2017-09-12 21:22:12 -0500
+Processing by EldersController#create as */*
+  Parameters: {"elder"=>{"username"=>"sam", "password"=>"[FILTERED]", "name"=>"Sam"}, "eldersemail"=>"me@me.com"}
+  [1m[35m (9.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (16.5ms)[0m  [1m[32mINSERT INTO "elders" ("name", "created_at", "updated_at", "username", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sam"], ["created_at", "2017-09-13 02:22:12.712523"], ["updated_at", "2017-09-13 02:22:12.712523"], ["username", "sam"], ["password_digest", "$2a$10$Aqbyphqs4wvk8iyRaBZchuLKRGBP25wkKI38TGNoZYKTqU3T0bR.a"]]
+  [1m[35m (15.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 256ms (Views: 11.9ms | ActiveRecord: 40.9ms)
+
+
