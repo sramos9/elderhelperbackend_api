@@ -6330,3 +6330,52 @@ Filter chain halted as :authenticate_token rendered or redirected
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 19:14:14 -0500
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EldersController#login as HTML
+  Parameters: {"elder"=>{"username"=>"sam", "password"=>"[FILTERED]"}}
+  [1m[36mElder Load (21.6ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "sam"], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 0.9ms | ActiveRecord: 30.5ms)
+
+
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 19:14:42 -0500
+Processing by EldersController#login as HTML
+  Parameters: {"elder"=>{"username"=>"sam", "password"=>"[FILTERED]"}}
+  [1m[36mElder Load (1.0ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "sam"], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 1.4ms | ActiveRecord: 9.9ms)
+
+
+Started POST "/elders/login" for 127.0.0.1 at 2017-09-12 19:15:54 -0500
+Processing by EldersController#login as HTML
+  Parameters: {"elder"=>{"username"=>"tom", "password"=>"[FILTERED]"}}
+  [1m[36mElder Load (6.1ms)[0m  [1m[34mSELECT  "elders".* FROM "elders" WHERE "elders"."username" = $1 LIMIT $2[0m  [["username", "tom"], ["LIMIT", 1]]
+Completed 200 OK in 185ms (Views: 5.7ms | ActiveRecord: 37.1ms)
+
+
+Started GET "/elders" for 127.0.0.1 at 2017-09-12 19:19:12 -0500
+Processing by EldersController#index as HTML
+  [1m[36mElder Load (1.5ms)[0m  [1m[34mSELECT "elders".* FROM "elders"[0m
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 1]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 2]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 3]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 4]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 5]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 6]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 7]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 8]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 9]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 10]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 11]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 12]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 13]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 14]]
+  [1m[36mTask Load (2.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 15]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 16]]
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 17]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 18]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 19]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 20]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."elder_id" = $1[0m  [["elder_id", 21]]
+Completed 200 OK in 336ms (Views: 0.4ms | ActiveRecord: 57.9ms)
+
+
