@@ -43,6 +43,11 @@ As a requester, the user may publish a new task to the task list.  This uses a C
 ##Struggles
 Authentication, many aspects of the process broke our code.  Sometimes it would seem fixed, only to be broken again minutes later.  We had a heroku fail and our database stopped working at some point, and had to get time with a teacher to troubleshoot the broken backend on heroku and get it working again.  We also had a git issue with one of our repos, and had to ditch it in favor of a newer one.
 
+## Cors.rb
+https:// does not work with login JWT token auth. Future steps: check if the request is even getting to that login route. In the login method they can `puts` a big message, then `puts params` to see if the params are coming through properly
+`heroku logs` will show whether or not the big message and params even show up (and these would go before anything else in the method)
+
+
 ## Future Goals
 -show which tasks have volunteers already, and make the number of volunteers a choice that is picked by the elder/creator.
 -finish styling, center text when appropriate, use flex boxes, make site scale to media
