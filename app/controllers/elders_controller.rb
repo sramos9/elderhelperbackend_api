@@ -42,7 +42,8 @@ end
 
 
     if @elder.save
-      render json: @elder, status: :created, location: @elder
+      render json: @elder, status: :created
+      # , location: @elder
     else
       render json: @elder.errors, status: :unprocessable_entity
     end

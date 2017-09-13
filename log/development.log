@@ -7292,3 +7292,30 @@ Processing by EldersController#index as HTML
 Completed 200 OK in 246ms (Views: 0.2ms | ActiveRecord: 24.3ms)
 
 
+Started POST "/elders" for 127.0.0.1 at 2017-09-13 01:14:24 -0500
+Processing by EldersController#create as */*
+  Parameters: {"elder"=>{"name"=>"tony", "email"=>"t@tn.com", "username"=>"tony", "password"=>"[FILTERED]"}}
+  [1m[35m (28.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (88.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "email", "created_at", "updated_at", "username", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "tony"], ["email", "t@tn.com"], ["created_at", "2017-09-13 06:14:27.296091"], ["updated_at", "2017-09-13 06:14:27.296091"], ["username", "tony"], ["password_digest", "$2a$10$T0o/clO.kROCc2pTvVY5.u6fxx3QVmVdMtFWPNxfgduEpK1M3H9Am"]]
+  [1m[35m (31.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 838ms (Views: 10.7ms | ActiveRecord: 606.2ms)
+
+
+Started POST "/elders" for 127.0.0.1 at 2017-09-13 01:19:00 -0500
+Processing by EldersController#create as */*
+  Parameters: {"elder"=>{"name"=>"tony2", "email"=>"t@tn.com", "username"=>"tony2", "password"=>"[FILTERED]"}}
+  [1m[35m (4.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (231.5ms)[0m  [1m[32mINSERT INTO "elders" ("name", "email", "created_at", "updated_at", "username", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "tony2"], ["email", "t@tn.com"], ["created_at", "2017-09-13 06:19:00.387537"], ["updated_at", "2017-09-13 06:19:00.387537"], ["username", "tony2"], ["password_digest", "$2a$10$5.PfBsxCNDaD4K99hxQ2DO5mQqPTnkPnzNRaP7ldby7tYkOAbLKEu"]]
+  [1m[35m (35.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 600ms (Views: 20.6ms | ActiveRecord: 271.4ms)
+
+
+Started POST "/elders" for 127.0.0.1 at 2017-09-13 01:19:24 -0500
+Processing by EldersController#create as */*
+  Parameters: {"elder"=>{"name"=>"tony2", "email"=>"t@tn.com", "username"=>"tony2", "password"=>"[FILTERED]"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.6ms)[0m  [1m[32mINSERT INTO "elders" ("name", "email", "created_at", "updated_at", "username", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "tony2"], ["email", "t@tn.com"], ["created_at", "2017-09-13 06:19:26.901511"], ["updated_at", "2017-09-13 06:19:26.901511"], ["username", "tony2"], ["password_digest", "$2a$10$Vm2qm4qKnyQxEBZZDor0oubZP80jW8u0QBsRfRuyK8ghPczgLaidG"]]
+  [1m[35m (9.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 1161ms (Views: 5.9ms | ActiveRecord: 292.0ms)
+
+
