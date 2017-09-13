@@ -5,17 +5,17 @@ class EldersController < ApplicationController
 
   #elder login, /login
   def login
-    puts 'testing'
-    puts params[:elders][:username]
+    # puts 'testing'
+    # puts params[:elders][:username]
     elder = Elder.find_by(username: params[:elders][:username])
-    puts 'on line 10'
-    puts elder
+    # puts 'on line 10'
+    # puts elder
     if elder && elder.authenticate(params[:elders][:password])
-      puts 'line 14'
+      # puts 'line 14'
       token = create_token(elder.id, elder.username)
       render json: {status: 200, token: token, elder: elder}
     else
-      puts 'inside of else line 18'
+      # puts 'inside of else line 18'
       render json: {status: 401, message: "Unauthorized"}
     end
 end
