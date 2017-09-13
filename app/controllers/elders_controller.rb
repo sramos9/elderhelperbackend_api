@@ -1,7 +1,7 @@
 class EldersController < ApplicationController
   before_action :set_elder, only: [:show, :update, :destroy]
-  # before_action :authenticate_token, except: [:login, :create]
-  # before_action :authorize_elder, except: [:login, :create, :index]
+  before_action :authenticate_token, except: [:login, :create]
+  before_action :authorize_elder, except: [:login, :create, :index]
 
   #elder login, /login
   def login
