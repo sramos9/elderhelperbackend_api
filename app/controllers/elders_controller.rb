@@ -1,16 +1,16 @@
 class EldersController < ApplicationController
   before_action :set_elder, only: [:show, :update, :destroy]
-  before_action :authenticate_token, except: [:login, :create]
-  before_action :authorize_elder, except: [:login, :create, :index]
+  # before_action :authenticate_token, except: [:login, :create]
+  # before_action :authorize_elder, except: [:login, :create, :index]
 
   #elder login, /login
   def login
     # puts 'testing'
     # puts params[:elders][:username]
-    elder = Elder.find_by(username: params[:elders][:username])
+    elder = Elder.find_by(username: params[:elder][:username])
     # puts 'on line 10'
     # puts elder
-    if elder && elder.authenticate(params[:elders][:password])
+    if elder && elder.authenticate(params[:elder][:password])
       # puts 'line 14'
       token = create_token(elder.id, elder.username)
       render json: {status: 200, token: token, elder: elder}
